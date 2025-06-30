@@ -1,3 +1,16 @@
 import comp from "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/demo/82fx2ska/index.html.vue"
-const data = JSON.parse("{\"path\":\"/demo/82fx2ska/\",\"title\":\"foo\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"foo\",\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/demo/82fx2ska/\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"foo\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":\\\"2025-06-29T07:58:11.000Z\\\",\\\"author\\\":[]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://avicii13579.github.io/blog/blog/demo/82fx2ska/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"My Vuepress Site\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"foo\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2025-06-29T07:58:11.000Z\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2025-06-29T07:58:11.000Z\"}]]},\"readingTime\":{\"minutes\":0.04,\"words\":11},\"git\":{\"createdTime\":1751183891000,\"updatedTime\":1751183891000,\"contributors\":[{\"name\":\"Rowan\",\"username\":\"Rowan\",\"email\":\"18699499130@163.com\",\"commits\":1,\"avatar\":\"https://avatars.githubusercontent.com/Rowan?v=4\",\"url\":\"https://github.com/Rowan\"}]},\"filePathRelative\":\"notes/demo/foo.md\",\"headers\":[]}")
+const data = JSON.parse("{\"path\":\"/demo/82fx2ska/\",\"title\":\"foo\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"foo\",\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/demo/82fx2ska/\"},\"readingTime\":{\"minutes\":0.04,\"words\":11},\"git\":{},\"filePathRelative\":\"notes/demo/foo.md\",\"headers\":[]}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}
