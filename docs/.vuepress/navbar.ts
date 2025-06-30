@@ -8,7 +8,6 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export default defineNavbarConfig([
   { text: '首页', link: '/' },
-  { text: '文章列表', link: '/articles/' },
   { text: '技术', link: '/technology/' },
   { text: '理财', link: '/wealth/' },
   { text: '随笔', link: '/jottings/' },

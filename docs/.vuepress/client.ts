@@ -5,9 +5,7 @@ import { defineClientConfig } from 'vuepress/client'
 // import Swiper from 'vuepress-theme-plume/features/Swiper.vue'
 
 import CustomComponent from './theme/components/Custom.vue'
-import SidebarFilter from './theme/components/SidebarFilter.vue'
 import ArticleDataProvider from './theme/components/ArticleDataProvider.vue'
-import TechnologyFilter from './theme/components/TechnologyFilter.vue'
 import ThemeFilter from './theme/components/ThemeFilter.vue'
 
 // import './theme/styles/custom.css'
@@ -22,9 +20,7 @@ export default defineClientConfig({
 
     // your custom components
     app.component('CustomComponent', CustomComponent)
-    app.component('SidebarFilter', SidebarFilter)
     app.component('ArticleDataProvider', ArticleDataProvider)
-    app.component('TechnologyFilter', TechnologyFilter)
     app.component('ThemeFilter', ThemeFilter)
   },
 })

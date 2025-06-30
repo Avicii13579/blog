@@ -3,15 +3,13 @@ title: 技术文章
 pageLayout: page
 ---
 
-# 技术文章
-
 <div class="theme-page">
   <div class="sidebar">
     <ThemeFilter theme="technology" />
   </div>
   <div class="main-content">
+    <h1>技术文章</h1>
     <p>这里收录了所有与技术相关的文章，包括前端开发、后端技术、工具使用等内容。</p>
-
     <h2>技术栈</h2>
     <ul>
       <li><strong>前端框架</strong>: Vue.js, React, Angular</li>
@@ -21,7 +19,6 @@ pageLayout: page
       <li><strong>数据库</strong>: MongoDB, MySQL, Redis</li>
       <li><strong>其他</strong>: TypeScript, Git, Docker</li>
     </ul>
-
     <p><em>持续更新中，欢迎关注！</em></p>
   </div>
 </div>

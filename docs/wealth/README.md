@@ -1,18 +1,15 @@
 ---
-lang: zh-CN
 title: 理财文章
 pageLayout: page
 ---
-
-# 理财文章
 
 <div class="theme-page">
   <div class="sidebar">
     <ThemeFilter theme="wealth" />
   </div>
   <div class="main-content">
+    <h1>理财文章</h1>
     <p>这里收录了所有与理财投资相关的文章，包括投资基础、被动收入、财务规划等内容。</p>
-
     <h2>投资领域</h2>
     <ul>
       <li><strong>股票投资</strong>: 价值投资、成长投资、技术分析</li>
@@ -22,7 +19,6 @@ pageLayout: page
       <li><strong>数字货币</strong>: 比特币、以太坊、DeFi</li>
       <li><strong>其他</strong>: 黄金、外汇、期货</li>
     </ul>
-
     <h2>理财原则</h2>
     <ul>
       <li>分散投资，降低风险</li>
