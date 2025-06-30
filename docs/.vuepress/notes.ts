@@ -21,25 +21,60 @@
  */
 import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 
-const demoNote = defineNoteConfig({
-  dir: 'demo',
-  // `dir` 所指向的目录中的所有 markdown 文件，其 permalink 需要以 `link` 配置作为前缀
-  // 如果 前缀不一致，则无法生成侧边栏。
-  // 所以请确保  markdown 文件的 permalink 都以 `link` 开头
-  link: '/demo',
-  // 手动配置侧边栏结构
-  sidebar: ['', 'foo', 'bar'],
-  // 根据文件结构自动生成侧边栏
-  // sidebar: 'auto',
+// 技术主题配置
+const technologyNote = defineNoteConfig({
+  dir: 'technology',
+  link: '/technology/',
+  sidebar: [
+    {
+      text: '技术文章',
+      items: [
+        // { text: '技术文章', link: '/technology/' },
+        { text: 'VuePress 入门指南', link: '/technology/getting-started/' },
+        { text: 'Vue3 开发技巧总结', link: '/technology/vue3-tips/' },
+        { text: 'CSS Grid 布局完全指南', link: '/technology/css-grid-layout/' },
+      ],
+    },
+  ],
+})
+
+// 财富主题配置
+const wealthNote = defineNoteConfig({
+  dir: 'wealth',
+  link: '/wealth/',
+  sidebar: [
+    {
+      text: '财富管理',
+      items: [
+        // { text: '财富管理', link: '/wealth/' },
+        { text: '投资基础知识入门', link: '/wealth/investment-basics/' },
+        { text: '被动收入：实现财务自由的关键', link: '/wealth/passive-income/' },
+      ],
+    },
+  ],
+})
+
+// 随笔主题配置
+const jottingsNote = defineNoteConfig({
+  dir: 'jottings',
+  link: '/jottings/',
+  sidebar: [
+    {
+      text: '生活随笔',
+      items: [
+        // { text: '生活随笔', link: '/jottings/' },
+        { text: '日常反思：记录生活的点滴感悟', link: '/jottings/daily-reflection/' },
+      ],
+    },
+  ],
 })
 
 /**
  * 导出所有的 note
  * 每一个 note 都应该填入到 `notes.notes` 数组中
- * （DemoNote 为参考示例，如果不需要它，请删除）
  */
 export default defineNotesConfig({
-  dir: 'notes',
+  dir: 'docs',
   link: '/',
-  notes: [demoNote],
+  notes: [technologyNote, wealthNote, jottingsNote],
 })
