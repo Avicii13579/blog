@@ -13,6 +13,11 @@ createTime: 2025/06/30 23:43:55
 permalink: /wealth/investment-basics/
 ---
 
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
+
 # 投资基础知识入门
 
 投资是实现财务自由的重要途径，本文将介绍投资的基础知识和核心概念。

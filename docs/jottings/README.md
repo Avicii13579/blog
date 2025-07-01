@@ -5,16 +5,34 @@ pageLayout: page
 
 <div class="theme-page">
   <div class="sidebar">
-    <ThemeFilter theme="jottings" />
+    <ThemeFilter 
+      theme="jottings" 
+      @update:filteredArticles="handleFilteredArticles"
+    />
   </div>
   <div class="main-content">
     <h1>随笔文章</h1>
     <p>这里收录了日常的思考、感悟和随笔，包括生活感悟、读书笔记、个人反思等内容。</p>
     <div class="filtered-articles">
-      <ArticleList theme="jottings" />
+      <ArticleList 
+        theme="jottings" 
+        :articles="filteredArticles"
+      />
     </div>
   </div>
 </div>
+
+<script setup>
+import { ref } from 'vue'
+
+// 存储筛选后的文章数据
+const filteredArticles = ref([])
+
+// 处理筛选结果
+const handleFilteredArticles = (articles) => {
+  filteredArticles.value = articles
+}
+</script>
 
 <style scoped>
 .theme-page {

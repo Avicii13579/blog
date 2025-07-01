@@ -104,7 +104,7 @@ const getArticleTitle = (path: string): string => {
     '/technology/css-grid-layout/': 'CSS Grid 布局完全指南',
     '/wealth/investment-basics/': '投资基础知识',
     '/wealth/passive-income/': '被动收入构建指南',
-    '/jottings/daily-reflection/': '日常反思：记录生活的点滴感悟'
+    '/jottings/daily-reflection/': '日常反思：如何提升工作效率'
   }
   
   return titleMap[path] || '文章详情'
@@ -281,6 +281,7 @@ const relatedArticles = computed((): RelatedArticle[] => {
 .breadcrumb-item {
   display: flex;
   align-items: center;
+  margin-top: 0rem;
 }
 
 .breadcrumb-separator {
@@ -296,7 +297,6 @@ const relatedArticles = computed((): RelatedArticle[] => {
 }
 
 .breadcrumb-link:hover {
-  color: var(--vp-c-brand-dark);
   text-decoration: underline;
 }
 

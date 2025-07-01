@@ -5,16 +5,34 @@ pageLayout: page
 
 <div class="theme-page">
   <div class="sidebar">
-    <ThemeFilter theme="wealth" />
+    <ThemeFilter 
+      theme="wealth" 
+      @update:filteredArticles="handleFilteredArticles"
+    />
   </div>
   <div class="main-content">
     <h1>理财文章</h1>
     <p>这里收录了所有与理财投资相关的文章，包括投资基础、被动收入、财务规划等内容。</p>
     <div class="filtered-articles">
-      <ArticleList theme="wealth" />
+      <ArticleList 
+        theme="wealth" 
+        :articles="filteredArticles"
+      />
     </div>
   </div>
 </div>
+
+<script setup>
+import { ref } from 'vue'
+
+// 存储筛选后的文章数据
+const filteredArticles = ref([])
+
+// 处理筛选结果
+const handleFilteredArticles = (articles) => {
+  filteredArticles.value = articles
+}
+</script>
 
 <style scoped>
 .theme-page {

@@ -13,6 +13,11 @@ createTime: 2025/06/30 23:45:30
 permalink: /jottings/daily-reflection/
 ---
 
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
+
 # 日常反思：记录生活的点滴感悟
 
 生活中有太多值得记录和思考的瞬间，这些看似平凡的日常，往往蕴含着深刻的道理。

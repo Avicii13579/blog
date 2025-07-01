@@ -13,6 +13,11 @@ createTime: 2025/06/30 23:37:18
 permalink: /technology/css-grid-layout/
 ---
 
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
+
 # CSS Grid 布局完全指南
 
 CSS Grid 是一个强大的二维布局系统，它彻底改变了我们构建网页布局的方式。本文将深入介绍 Grid 布局的核心概念和实用技巧。

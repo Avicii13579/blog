@@ -12,9 +12,12 @@ interface Article {
 
 interface Props {
   theme: 'technology' | 'wealth' | 'jottings'
+  articles?: Article[]
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  articles: undefined
+})
 
 // 根据主题获取文章数据
 const getArticlesByTheme = (theme: string): Article[] => {
@@ -22,25 +25,25 @@ const getArticlesByTheme = (theme: string): Article[] => {
     technology: [
       {
         title: 'VuePress 入门指南',
-        link: '/blog/technology/getting-started/',
+        link: '/technology/getting-started/',
         tags: ['VuePress', '教程', 'technology'],
-        categories: ['前端开发'],
+        categories: ['工具使用', '前端开发'],
         date: '2024-01-15',
         description: '学习如何使用 VuePress 搭建个人博客和文档网站'
       },
       {
         title: 'Vue3 开发技巧总结',
-        link: '/blog/technology/vue3-tips/',
+        link: '/technology/vue3-tips/',
         tags: ['Vue3', '前端', '技巧', 'technology'],
-        categories: ['前端开发'],
+        categories: ['前端开发', '框架使用'],
         date: '2024-01-20',
         description: '分享一些 Vue3 开发中的实用技巧和最佳实践'
       },
       {
         title: 'CSS Grid 布局完全指南',
-        link: '/blog/technology/css-grid-layout/',
+        link: '/technology/css-grid-layout/',
         tags: ['CSS', 'Grid', '布局', 'technology'],
-        categories: ['前端开发'],
+        categories: ['前端开发', 'CSS技术'],
         date: '2024-01-25',
         description: '深入理解 CSS Grid 布局系统，掌握现代网页布局技术'
       }
@@ -48,7 +51,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     wealth: [
       {
         title: '投资基础知识',
-        link: '/blog/wealth/investment-basics/',
+        link: '/wealth/investment-basics/',
         tags: ['投资', '基础', 'wealth'],
         categories: ['投资理财'],
         date: '2024-01-10',
@@ -56,7 +59,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: '被动收入构建指南',
-        link: '/blog/wealth/passive-income/',
+        link: '/wealth/passive-income/',
         tags: ['被动收入', '财务自由', 'wealth'],
         categories: ['被动收入'],
         date: '2024-01-18',
@@ -66,7 +69,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     jottings: [
       {
         title: '日常反思：如何提升工作效率',
-        link: '/blog/jottings/daily-reflection/',
+        link: '/jottings/daily-reflection/',
         tags: ['反思', '效率', 'jottings'],
         categories: ['生活感悟'],
         date: '2024-01-12',
@@ -78,7 +81,10 @@ const getArticlesByTheme = (theme: string): Article[] => {
   return articlesMap[theme as keyof typeof articlesMap] || []
 }
 
-const articles = ref<Article[]>(getArticlesByTheme(props.theme))
+// 使用计算属性来决定显示的文章：优先使用外部传入的数据，否则使用默认数据
+const articles = computed(() => {
+  return props.articles || getArticlesByTheme(props.theme)
+})
 
 // 获取主题名称
 const getThemeName = (theme: string) => {

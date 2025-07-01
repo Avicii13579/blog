@@ -13,6 +13,11 @@ createTime: 2025/06/30 23:44:45
 permalink: /wealth/passive-income/
 ---
 
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
+
 # 被动收入：实现财务自由的关键
 
 被动收入是指不需要持续投入大量时间和精力就能获得的收入。它是实现财务自由的重要途径。

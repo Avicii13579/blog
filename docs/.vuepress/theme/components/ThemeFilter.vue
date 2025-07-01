@@ -25,25 +25,25 @@ const getArticlesByTheme = (theme: string): Article[] => {
     technology: [
       {
         title: 'VuePress 入门指南',
-        link: '/blog/technology/getting-started/',
+        link: '/technology/getting-started/',
         tags: ['VuePress', '教程', 'technology'],
-        categories: ['前端开发'],
+        categories: ['工具使用', '前端开发'],
         date: '2024-01-15',
         description: '学习如何使用 VuePress 搭建个人博客和文档网站'
       },
       {
         title: 'Vue3 开发技巧总结',
-        link: '/blog/technology/vue3-tips/',
+        link: '/technology/vue3-tips/',
         tags: ['Vue3', '前端', '技巧', 'technology'],
-        categories: ['前端开发'],
+        categories: ['前端开发', '框架使用'],
         date: '2024-01-20',
         description: '分享一些 Vue3 开发中的实用技巧和最佳实践'
       },
       {
         title: 'CSS Grid 布局完全指南',
-        link: '/blog/technology/css-grid-layout/',
+        link: '/technology/css-grid-layout/',
         tags: ['CSS', 'Grid', '布局', 'technology'],
-        categories: ['前端开发'],
+        categories: ['前端开发', 'CSS技术'],
         date: '2024-01-25',
         description: '深入理解 CSS Grid 布局系统，掌握现代网页布局技术'
       }
@@ -51,7 +51,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     wealth: [
       {
         title: '投资基础知识',
-        link: '/blog/wealth/investment-basics/',
+        link: '/wealth/investment-basics/',
         tags: ['投资', '基础', 'wealth'],
         categories: ['投资理财'],
         date: '2024-01-10',
@@ -59,7 +59,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: '被动收入构建指南',
-        link: '/blog/wealth/passive-income/',
+        link: '/wealth/passive-income/',
         tags: ['被动收入', '财务自由', 'wealth'],
         categories: ['被动收入'],
         date: '2024-01-18',
@@ -69,7 +69,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     jottings: [
       {
         title: '日常反思：如何提升工作效率',
-        link: '/blog/jottings/daily-reflection/',
+        link: '/jottings/daily-reflection/',
         tags: ['反思', '效率', 'jottings'],
         categories: ['生活感悟'],
         date: '2024-01-12',
@@ -107,26 +107,78 @@ const allCategories = computed(() => {
   return Array.from(categories).sort()
 })
 
+// 根据选中的分类获取相关标签
+const availableTags = computed(() => {
+  // 如果没有选中分类，显示所有标签
+  if (selectedCategories.value.length === 0) {
+    return allTags.value
+  }
+  
+  // 如果选中了分类，只显示该分类下文章的标签
+  const tags = new Set<string>()
+  articles.value.forEach(article => {
+    // 检查文章是否属于选中的分类
+    const hasSelectedCategory = article.categories.some(category => 
+      selectedCategories.value.includes(category)
+    )
+    
+    if (hasSelectedCategory) {
+      article.tags.forEach(tag => {
+        if (tag !== props.theme) { // 排除主题标签
+          tags.add(tag)
+        }
+      })
+    }
+  })
+  
+  return Array.from(tags).sort()
+})
+
 // 选中的标签和分类
 const selectedTags = ref<string[]>([])
 const selectedCategories = ref<string[]>([])
+
+// 监听分类变化，清除不相关的标签选择
+watch(selectedCategories, (newCategories) => {
+  if (newCategories.length > 0) {
+    // 获取当前可用标签
+    const currentAvailableTags = availableTags.value
+    
+    // 清除不在当前可用标签中的选择
+    selectedTags.value = selectedTags.value.filter(tag => 
+      currentAvailableTags.includes(tag)
+    )
+  } else {
+    // 如果没有选中分类，清除所有标签选择
+    selectedTags.value = []
+  }
+})
 
 // 筛选后的文章
 const filteredArticles = computed(() => {
   let filtered = articles.value
 
-  // 按标签筛选
-  if (selectedTags.value.length > 0) {
+  // 如果同时选择了标签和分类，使用"与"的关系（必须同时满足）
+  if (selectedTags.value.length > 0 && selectedCategories.value.length > 0) {
     filtered = filtered.filter(article => 
+      // 文章分类包含任一选中的分类，并且文章标签包含任一选中的标签
+      article.categories.some(category => selectedCategories.value.includes(category)) &&
       article.tags.some(tag => selectedTags.value.includes(tag))
     )
-  }
+  } else {
+    // 只按标签筛选
+    if (selectedTags.value.length > 0) {
+      filtered = filtered.filter(article => 
+        article.tags.some(tag => selectedTags.value.includes(tag))
+      )
+    }
 
-  // 按分类筛选
-  if (selectedCategories.value.length > 0) {
-    filtered = filtered.filter(article => 
-      article.categories.some(category => selectedCategories.value.includes(category))
-    )
+    // 只按分类筛选
+    if (selectedCategories.value.length > 0) {
+      filtered = filtered.filter(article => 
+        article.categories.some(category => selectedCategories.value.includes(category))
+      )
+    }
   }
 
   return filtered
@@ -180,12 +232,12 @@ watch(filteredArticles, (newArticles) => {
       </div>
 
       <!-- 标签筛选 -->
-      <div class="filter-group" v-if="allTags.length > 0">
+      <div class="filter-group" v-if="availableTags.length > 0">
         <h4>按标签筛选</h4>
         <div class="checkbox-group">
           <label 
             class="checkbox-item" 
-            v-for="tag in allTags" 
+            v-for="tag in availableTags" 
             :key="tag"
           >
             <input 
@@ -196,7 +248,20 @@ watch(filteredArticles, (newArticles) => {
             <span class="checkbox-label">{{ tag }}</span>
           </label>
         </div>
+        <!-- 标签筛选说明 -->
+        <!-- <div class="tag-tip" v-if="selectedCategories.length > 0">
+          <p class="tip-text-small">
+            📝 当前显示的是"{{ selectedCategories.join('、') }}"分类下的标签
+          </p>
+        </div> -->
       </div>
+
+      <!-- 筛选说明 -->
+      <!-- <div class="filter-tip" v-if="selectedCategories.length > 0">
+        <p class="tip-text">
+          💡 提示：先选择分类，再选择该分类下的标签进行精确筛选
+        </p>
+      </div> -->
 
       <!-- 操作按钮 -->
       <div class="filter-actions">
@@ -261,6 +326,36 @@ watch(filteredArticles, (newArticles) => {
 .checkbox-label {
   color: var(--vp-c-text-1);
   font-size: 0.9rem;
+}
+
+.filter-tip {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: var(--vp-c-brand-soft);
+  border-radius: 6px;
+  border-left: 3px solid var(--vp-c-brand);
+}
+
+.tip-text {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.tag-tip {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: var(--vp-c-bg-elv);
+  border-radius: 4px;
+  border-left: 2px solid var(--vp-c-brand);
+}
+
+.tip-text-small {
+  margin: 0;
+  color: var(--vp-c-text-3);
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
 
 .filter-actions {

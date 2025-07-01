@@ -13,6 +13,11 @@ createTime: 2025/06/30 23:35:33
 permalink: /technology/vue3-tips/
 ---
 
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
+
 # Vue3 开发技巧总结
 
 Vue3 带来了许多新特性和改进，本文将分享一些在实际开发中非常实用的技巧。
