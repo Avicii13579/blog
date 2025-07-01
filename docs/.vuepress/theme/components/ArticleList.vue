@@ -41,7 +41,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: 'CSS Grid 布局完全指南',
-        link: '/technology/css-grid-layout/',
+        link: '/blog/technology/css-grid-layout/',
         tags: ['CSS', 'Grid', '布局', 'technology'],
         categories: ['前端开发', 'CSS技术'],
         date: '2024-01-25',

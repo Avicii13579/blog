@@ -25,7 +25,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     technology: [
       {
         title: 'VuePress 入门指南',
-        link: '/technology/getting-started/',
+        link: '/blog/technology/getting-started/',
         tags: ['VuePress', '教程', 'technology'],
         categories: ['工具使用', '前端开发'],
         date: '2024-01-15',
@@ -33,7 +33,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: 'Vue3 开发技巧总结',
-        link: '/technology/vue3-tips/',
+        link: '/blog/technology/vue3-tips/',
         tags: ['Vue3', '前端', '技巧', 'technology'],
         categories: ['前端开发', '框架使用'],
         date: '2024-01-20',
@@ -41,7 +41,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: 'CSS Grid 布局完全指南',
-        link: '/technology/css-grid-layout/',
+        link: '/blog/technology/css-grid-layout/',
         tags: ['CSS', 'Grid', '布局', 'technology'],
         categories: ['前端开发', 'CSS技术'],
         date: '2024-01-25',
@@ -51,7 +51,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     wealth: [
       {
         title: '投资基础知识',
-        link: '/wealth/investment-basics/',
+        link: '/blog/wealth/investment-basics/',
         tags: ['投资', '基础', 'wealth'],
         categories: ['投资理财'],
         date: '2024-01-10',
@@ -59,7 +59,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
       },
       {
         title: '被动收入构建指南',
-        link: '/wealth/passive-income/',
+        link: '/blog/wealth/passive-income/',
         tags: ['被动收入', '财务自由', 'wealth'],
         categories: ['被动收入'],
         date: '2024-01-18',
@@ -69,7 +69,7 @@ const getArticlesByTheme = (theme: string): Article[] => {
     jottings: [
       {
         title: '日常反思：如何提升工作效率',
-        link: '/jottings/daily-reflection/',
+        link: '/blog/jottings/daily-reflection/',
         tags: ['反思', '效率', 'jottings'],
         categories: ['生活感悟'],
         date: '2024-01-12',

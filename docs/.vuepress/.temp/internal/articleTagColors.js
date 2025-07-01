@@ -1,5 +1,5 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"ydjq","个人成长":"zrtm","随笔":"om9w","jottings":"y2o8","预览":"ydjq","组件":"mw1m","markdown":"zrtm","CSS":"z6r5","Grid":"ss63","布局":"tvdy","technology":"tmn4","VuePress":"c0iw","教程":"dxm3","Vue3":"tob6","前端":"mw1m","技巧":"y6ii","投资":"zrtm","理财":"y6mq","财富管理":"zrtm","wealth":"2n6o","被动收入":"y6mq","财务自由":"mt13"}
+export const articleTagColors = {"生活感悟":"6a3o","个人成长":"hcd9","随笔":"vel3","jottings":"a6af","预览":"6a3o","组件":"jkz8","markdown":"hcd9","CSS":"87d2","Grid":"1vfm","布局":"hmhs","technology":"q3hr","VuePress":"7o24","教程":"imip","Vue3":"3txt","前端":"jkz8","技巧":"adab","投资":"hcd9","理财":"ogv4","财富管理":"hcd9","wealth":"zgnb","被动收入":"ogv4","财务自由":"k2yl"}
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
