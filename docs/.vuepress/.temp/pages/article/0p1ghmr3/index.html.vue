@@ -70,7 +70,7 @@
 </blockquote>
 <p><VPLink href="/">链接</VPLink></p>
 <p><a href="https://github.com/pengzhanbo" target="_blank" rel="noopener noreferrer">外部链接</a></p>
-<p><img src="/plume.svg" alt="plume"></p>
+<p><img src="/logo3.png" alt="plume"></p>
 <p><strong>Badge：</strong></p>
 <ul>
 <li>
