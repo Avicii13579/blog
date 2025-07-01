@@ -10,16 +10,9 @@ pageLayout: page
   <div class="main-content">
     <h1>技术文章</h1>
     <p>这里收录了所有与技术相关的文章，包括前端开发、后端技术、工具使用等内容。</p>
-    <h2>技术栈</h2>
-    <ul>
-      <li><strong>前端框架</strong>: Vue.js, React, Angular</li>
-      <li><strong>构建工具</strong>: Vite, Webpack, Rollup</li>
-      <li><strong>样式方案</strong>: CSS3, Sass, Tailwind CSS</li>
-      <li><strong>后端技术</strong>: Node.js, Express, Koa</li>
-      <li><strong>数据库</strong>: MongoDB, MySQL, Redis</li>
-      <li><strong>其他</strong>: TypeScript, Git, Docker</li>
-    </ul>
-    <p><em>持续更新中，欢迎关注！</em></p>
+    <div class="filtered-articles">
+      <ArticleList theme="technology" />
+    </div>
   </div>
 </div>
 
@@ -32,6 +25,9 @@ pageLayout: page
   width: 100%;
   margin: 2rem auto;
   padding: 0 1rem;
+}
+.filtered-articles {
+  margin-top: 1rem;
 }
 
 .sidebar {
