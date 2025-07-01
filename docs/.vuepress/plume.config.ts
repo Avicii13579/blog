@@ -50,8 +50,8 @@ export default defineThemeConfig({
    */
   profile: {
     avatar: 'https://theme-plume.vuejs.press/plume.png',
-    name: 'My Vuepress Site',
-    description: 'share blog',
+    name: '吾园小记',
+    description: '随笔与生活分享',
     // circle: true,
     // location: '',
     // organization: '',
