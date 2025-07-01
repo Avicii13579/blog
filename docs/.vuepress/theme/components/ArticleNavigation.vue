@@ -4,13 +4,11 @@ import { ref, onMounted, computed } from 'vue'
 
 interface Props {
   showBreadcrumb?: boolean
-  showBackButton?: boolean
   showRelatedArticles?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   showBreadcrumb: true,
-  showBackButton: true,
   showRelatedArticles: true
 })
 
@@ -239,15 +237,6 @@ const relatedArticles = computed((): RelatedArticle[] => {
       </ol>
     </nav>
 
-    <!-- 返回按钮 -->
-    <div v-if="showBackButton" class="back-button-container">
-      <button @click="goBack" class="back-button" :title="getBackText">
-        <svg class="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="back-text">{{ getBackText }}</span>
-      </button>
-    </div>
 
     <!-- 相关文章推荐 -->
     <div v-if="showRelatedArticles && relatedArticles.length > 0" class="related-articles">

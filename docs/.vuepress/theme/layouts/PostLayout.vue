@@ -37,7 +37,6 @@ const getBackText = computed(() => {
 
 <template>
   <div class="post-layout">
-    <BackButton :fallback-path="getBackPath" :text="getBackText" />
     <slot />
   </div>
 </template>
