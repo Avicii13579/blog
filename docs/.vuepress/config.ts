@@ -17,7 +17,7 @@ export default defineUserConfig({
   base: '/blog/',
   lang: 'zh-CN',
   title: '吾园小记',
-  description: ' 随笔与生活分享',
+  description: '随笔与生活分享',
 
   head: [
     // 配置站点图标
