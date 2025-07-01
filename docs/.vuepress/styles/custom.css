@@ -48,3 +48,10 @@
   --vp-c-text-3: rgba(235, 235, 245, 0.38);
   */
 }
+
+/* plume 主题 logo 图片高度自定义 */
+.plume-navbar__logo img {
+  height: 48px !important;
+  width: auto;
+  max-width: 180px;
+}

@@ -14,7 +14,7 @@ config:
         -
           theme: brand
           text: 开始阅读
-          link: /articles/
+          link: /technology/
         -
           theme: alt
           text: 关于我 →

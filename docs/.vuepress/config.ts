@@ -16,8 +16,8 @@ import { plumeTheme } from 'vuepress-theme-plume'
 export default defineUserConfig({
   base: '/blog/',
   lang: 'zh-CN',
-  title: 'My Vuepress Site',
-  description: 'share blog',
+  title: '吾园小记',
+  description: ' 随笔与生活分享',
 
   head: [
     // 配置站点图标

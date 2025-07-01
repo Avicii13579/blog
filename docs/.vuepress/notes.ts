@@ -25,48 +25,48 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 const technologyNote = defineNoteConfig({
   dir: 'technology',
   link: '/technology/',
-  sidebar: [
-    {
-      text: '技术文章',
-      items: [
-        // { text: '技术文章', link: '/technology/' },
-        { text: 'VuePress 入门指南', link: '/technology/getting-started/' },
-        { text: 'Vue3 开发技巧总结', link: '/technology/vue3-tips/' },
-        { text: 'CSS Grid 布局完全指南', link: '/technology/css-grid-layout/' },
-      ],
-    },
-  ],
+  // sidebar: [
+  //   {
+  //     text: '技术文章',
+  //     items: [
+  //       // { text: '技术文章', link: '/technology/' },
+  //       { text: 'VuePress 入门指南', link: '/technology/getting-started/' },
+  //       { text: 'Vue3 开发技巧总结', link: '/technology/vue3-tips/' },
+  //       { text: 'CSS Grid 布局完全指南', link: '/technology/css-grid-layout/' },
+  //     ],
+  //   },
+  // ],
 })
 
 // 财富主题配置
 const wealthNote = defineNoteConfig({
   dir: 'wealth',
   link: '/wealth/',
-  sidebar: [
-    {
-      text: '财富管理',
-      items: [
-        // { text: '财富管理', link: '/wealth/' },
-        { text: '投资基础知识入门', link: '/wealth/investment-basics/' },
-        { text: '被动收入：实现财务自由的关键', link: '/wealth/passive-income/' },
-      ],
-    },
-  ],
+  // sidebar: [
+  //   {
+  //     text: '财富管理',
+  //     items: [
+  //       // { text: '财富管理', link: '/wealth/' },
+  //       { text: '投资基础知识入门', link: '/wealth/investment-basics/' },
+  //       { text: '被动收入：实现财务自由的关键', link: '/wealth/passive-income/' },
+  //     ],
+  //   },
+  // ],
 })
 
 // 随笔主题配置
 const jottingsNote = defineNoteConfig({
   dir: 'jottings',
   link: '/jottings/',
-  sidebar: [
-    {
-      text: '生活随笔',
-      items: [
-        // { text: '生活随笔', link: '/jottings/' },
-        { text: '日常反思：记录生活的点滴感悟', link: '/jottings/daily-reflection/' },
-      ],
-    },
-  ],
+  // sidebar: [
+  //   {
+  //     text: '生活随笔',
+  //     items: [
+  //       // { text: '生活随笔', link: '/jottings/' },
+  //       { text: '日常反思：记录生活的点滴感悟', link: '/jottings/daily-reflection/' },
+  //     ],
+  //   },
+  // ],
 })
 
 /**

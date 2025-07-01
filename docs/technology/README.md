@@ -28,8 +28,9 @@ pageLayout: page
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: calc(1440px - 64px);
+  width: 100%;
+  margin: 2rem auto;
   padding: 0 1rem;
 }
 

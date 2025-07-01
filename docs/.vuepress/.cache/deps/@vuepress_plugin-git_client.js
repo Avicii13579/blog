@@ -109,7 +109,7 @@ var useLastUpdated = (enabled = true) => {
 var VPHeader = ({ level = 2, text, anchor }) => h(`h${level || 2}`, { id: anchor, tabindex: "-1" }, h("a", { href: `#${anchor}`, class: "header-anchor" }, h("span", text)));
 
 // node_modules/@vuepress/plugin-git/lib/client/components/GitContributors.js
-import "/Users/jiuan/Desktop/my-blog/node_modules/@vuepress/plugin-git/lib/client/styles/contributors.css";
+import "/Users/daerduo/Desktop/blog/node_modules/@vuepress/plugin-git/lib/client/styles/contributors.css";
 var GitContributor = ({ name, url, avatar }) => h(url ? "a" : "span", {
   href: url,
   target: "_blank",
@@ -145,8 +145,8 @@ var GitContributors = defineComponent({
 });
 
 // node_modules/@vuepress/plugin-git/lib/client/components/GitChangelog.js
-import "/Users/jiuan/Desktop/my-blog/node_modules/@vuepress/plugin-git/lib/client/styles/vars.css";
-import "/Users/jiuan/Desktop/my-blog/node_modules/@vuepress/plugin-git/lib/client/styles/changelog.css";
+import "/Users/daerduo/Desktop/blog/node_modules/@vuepress/plugin-git/lib/client/styles/vars.css";
+import "/Users/daerduo/Desktop/blog/node_modules/@vuepress/plugin-git/lib/client/styles/changelog.css";
 var GitChangelog = defineComponent({
   name: "GitChangelog",
   props: {

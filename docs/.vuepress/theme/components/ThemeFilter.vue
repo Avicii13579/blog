@@ -213,9 +213,8 @@ const getThemeName = (theme: string) => {
             <div class="tags">
               <span 
                 class="tag" 
-                v-for="tag in article.tags" 
+                v-for="tag in article.tags.filter(t => t !== props.theme)" 
                 :key="tag"
-                v-if="tag !== props.theme"
               >
                 {{ tag }}
               </span>
