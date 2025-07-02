@@ -1,2 +1,15 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"4xyr","个人成长":"3uq6","随笔":"si2u","jottings":"v0sq","预览":"4xyr","组件":"373h","markdown":"3uq6","CSS":"kpw5","Grid":"fhas","布局":"b15t","technology":"9if9","VuePress":"b855","教程":"9ce1","Vue3":"on1m","前端":"373h","技巧":"z131","Giscus":"x0xt","投资":"3uq6","理财":"x0xt","财富管理":"3uq6","wealth":"sca5","被动收入":"x0xt","财务自由":"ibal"}
+export const articleTagColors = {"生活感悟":"nckb","个人成长":"v895","随笔":"cgfd","jottings":"0j1i","预览":"nckb","组件":"hohf","markdown":"v895","投资":"v895","理财":"dhsk","财富管理":"v895","wealth":"tuy5","被动收入":"dhsk","财务自由":"4pn7","CSS":"at2o","Grid":"y5ad","布局":"iiis","technology":"d9pd","VuePress":"gln9","教程":"ygl7","Vue3":"3u91","前端":"hohf","技巧":"2664","Giscus":"dhsk"}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateArticleTagColors) {
+    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ articleTagColors }) => {
+    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
+  })
+}

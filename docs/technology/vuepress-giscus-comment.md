@@ -29,6 +29,7 @@ Giscus 是一个基于 GitHub Discussions 的免费评论系统，适合静态�
 
 1. 已搭建好 VuePress 博客项目。
 2. 拥有一个 GitHub 账号和仓库（用于存储评论数据），如下图操作开启讨论。
+   
 ![图片描述](/images/technology/img1/img2.png)
 
 
@@ -40,6 +41,7 @@ Giscus 是一个基于 GitHub Discussions 的免费评论系统，适合静态�
 4. 设置 Discussion 分类（建议 Announcements）。
 5. 配置参数（如 mapping 选择 pathname，language 选择 zh-CN）。
 6. 生成一段 `<script ...></script>` 代码，记得保存。
+   
 ![图片描述](/images/technology/img1/img3.png)
 
 ## 三、在 VuePress 中集成 Giscus
@@ -54,6 +56,7 @@ import { commentPlugin } from '@vuepress/plugin-comment'
 ```
 
 3. 打开或新建 `docs/.vuepress/config.ts` 文件内，添加配置：
+   
 ![图片描述](/images/technology/img1/img4.png)
 
 

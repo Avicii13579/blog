@@ -190,6 +190,10 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/guide/features/encryption/
      */
     // encrypt: {},
+    footer: {
+      message: '本站由 <a target="_blank" href="https://vuepress.vuejs.org/">VuePress</a> 强力驱动，主题为 <a target="_blank" href="https://theme-plume.vuejs.press">Plume</a>。',
+      copyright: '© 2025 吾园小记-敢敢🐈'
+    },
   }),
   plugins: [
     /**

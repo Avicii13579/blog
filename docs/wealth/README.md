@@ -78,5 +78,3 @@ const handleFilteredArticles = (articles) => {
   }
 }
 </style>
-
-持续更新中，欢迎关注！
