@@ -33,12 +33,17 @@ const articles = computed(() => {
     <h2>文章列表</h2>
 
     <div class="articles-container" v-if="articles.length > 0">
-      <div 
+      <a 
         class="article-item" 
         v-for="article in articles" 
         :key="article.link"
+        :href="article.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        tabindex="0"
+        aria-label="查看文章：{{ article.title }}"
       >
-        <h4><a :href="article.link">{{ article.title }}</a></h4>
+        <h4>{{ article.title }}</h4>
         <p class="article-desc">{{ article.description }}</p>
         <div class="article-meta">
           <span class="date">{{ article.date }}</span>
@@ -52,7 +57,7 @@ const articles = computed(() => {
             </span>
           </div>
         </div>
-      </div>
+      </a>
     </div>
     <div class="no-results" v-else>
       <p>没有找到符合条件的文章</p>
@@ -78,17 +83,24 @@ const articles = computed(() => {
 }
 
 .article-item {
+  display: block;
   padding: 1rem;
   background: var(--vp-c-bg-soft);
   border-radius: 6px;
   border: 1px solid var(--vp-c-divider);
   transition: all 0.2s;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  cursor: pointer;
 }
 
-.article-item:hover {
+.article-item:hover, .article-item:focus {
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand);
+  background: var(--vp-c-bg);
+  outline: none;
+  
 }
 
 .article-item h4 {
@@ -102,7 +114,7 @@ const articles = computed(() => {
   font-weight: 600;
 }
 
-.article-item h4 a:hover {
+.article-item:hover  h4 , .article-item:focus h4  {
   color: var(--vp-c-brand);
 }
 
