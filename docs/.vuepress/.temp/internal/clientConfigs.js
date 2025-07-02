@@ -8,7 +8,9 @@ import * as clientConfig6 from '/Users/daerduo/Desktop/blog/node_modules/@vuepre
 import * as clientConfig7 from '/Users/daerduo/Desktop/blog/node_modules/@vuepress-plume/plugin-search/lib/client/config.js'
 import * as clientConfig8 from '/Users/daerduo/Desktop/blog/docs/.vuepress/.temp/git/config.js'
 import * as clientConfig9 from '/Users/daerduo/Desktop/blog/node_modules/vuepress-theme-plume/lib/client/config.js'
-import * as clientConfig10 from '/Users/daerduo/Desktop/blog/docs/.vuepress/client.ts'
+import * as clientConfig10 from '/Users/daerduo/Desktop/blog/docs/.vuepress/.temp/sass-palette/load-hope.js'
+import * as clientConfig11 from '/Users/daerduo/Desktop/blog/node_modules/vuepress-plugin-comment2/lib/client/config.js'
+import * as clientConfig12 from '/Users/daerduo/Desktop/blog/docs/.vuepress/client.ts'
 
 export const clientConfigs = [
   clientConfig0,
@@ -22,4 +24,6 @@ export const clientConfigs = [
   clientConfig8,
   clientConfig9,
   clientConfig10,
+  clientConfig11,
+  clientConfig12,
 ].map((m) => m.default).filter(Boolean)
