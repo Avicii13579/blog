@@ -102,6 +102,7 @@ const getArticleTitle = (path: string): string => {
     '/technology/getting-started/': 'VuePress 入门指南',
     '/technology/vue3-tips/': 'Vue3 开发技巧总结',
     '/technology/css-grid-layout/': 'CSS Grid 布局完全指南',
+    '/technology/vuepress-giscus-comment/': '在 VuePress 集成 Giscus 评论系统',
     '/wealth/investment-basics/': '投资基础知识',
     '/wealth/passive-income/': '被动收入构建指南',
     '/jottings/daily-reflection/': '日常反思：如何提升工作效率'

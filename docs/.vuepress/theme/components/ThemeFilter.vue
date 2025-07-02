@@ -46,6 +46,14 @@ const getArticlesByTheme = (theme: string): Article[] => {
         categories: ['前端开发', 'CSS技术'],
         date: '2024-01-25',
         description: '深入理解 CSS Grid 布局系统，掌握现代网页布局技术'
+      },
+      {
+        title: '在 VuePress 集成 Giscus 评论系统',
+        link: '/blog/technology/vuepress-giscus-comment/',
+        tags: ['VuePress', 'Giscus', '教程', 'technology'],
+        categories: ['前端开发'],
+        date: '2024-06-10',
+        description: '详细介绍如何在 VuePress 博客中安装和配置 Giscus 评论模块，提升用户互动体验。'
       }
     ],
     wealth: [
