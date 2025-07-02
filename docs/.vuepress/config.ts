@@ -20,8 +20,10 @@ export default defineUserConfig({
   description: '随笔与生活分享',
 
   head: [
+    // 自定义样式生效
+    ['link', { rel: 'stylesheet', href: '/blog/custom.css' }],
     // 配置站点图标
-    ['link', { rel: 'icon', type: 'image/png', href: 'https://theme-plume.vuejs.press/favicon-32x32.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/blog/logo3.png' }],
   ],
 
   bundler: viteBundler(),
