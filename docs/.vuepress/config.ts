@@ -1,4 +1,7 @@
 /**
+ * @file VuePress 配置文件，集成 @vuepress/plugin-comment 作为评论系统
+ * @description 替换已弃用的 vuepress-plugin-comment2，采用官方推荐插件
+ *
  * 查看以下文档了解主题配置
  * - @see https://theme-plume.vuejs.press/config/intro/ 配置说明
  * - @see https://theme-plume.vuejs.press/config/theme/ 主题配置项
@@ -12,7 +15,7 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-import { commentPlugin } from 'vuepress-plugin-comment2'
+import { commentPlugin } from '@vuepress/plugin-comment'
 
 export default defineUserConfig({
   base: '/blog/',
