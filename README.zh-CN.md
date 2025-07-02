@@ -11,6 +11,9 @@ npm i
 ## Usage
 
 ```sh
+
+# 下面这个脚本可以更新文章列表
+node scripts/generate-article-data.cjs
 # 启动开发服务
 npm run docs:dev
 # 构建生产包

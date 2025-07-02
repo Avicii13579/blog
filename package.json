@@ -9,11 +9,12 @@
     "node": "^20.6.0 || >=22.0.0"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
+    "docs:dev": "node scripts/generate-article-data.cjs && vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
-    "vp-update": "npx vp-update"
+    "vp-update": "npx vp-update",
+    "generate-article-data": "node scripts/generate-article-data.cjs"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.23",
@@ -26,6 +27,7 @@
     "vuepress-theme-plume": "^1.0.0-rc.155"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "medium-zoom": "^1.1.0"
   }
 }

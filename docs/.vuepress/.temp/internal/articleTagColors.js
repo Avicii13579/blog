@@ -1,5 +1,5 @@
 import './articleTagColors.css'
-export const articleTagColors = {"预览":"m1f8","组件":"1d92","markdown":"svpv","生活感悟":"m1f8","个人成长":"svpv","随笔":"mxw1","jottings":"dvhl","CSS":"0w25","Grid":"a8ce","布局":"5l4n","technology":"2vyy","VuePress":"lks8","教程":"6554","Vue3":"77m5","前端":"1d92","技巧":"yulp","Giscus":"8fyv","投资":"svpv","理财":"8fyv","财富管理":"svpv","wealth":"iciy","被动收入":"8fyv","财务自由":"z1eb"}
+export const articleTagColors = {"生活感悟":"mq2n","个人成长":"lks1","随笔":"obid","jottings":"6rez","预览":"mq2n","组件":"a25g","markdown":"lks1","CSS":"sen0","Grid":"txmr","布局":"jpxk","technology":"35mm","VuePress":"e56g","教程":"z1sq","Vue3":"01aa","前端":"a25g","技巧":"jcx8","Giscus":"h9dk","投资":"lks1","理财":"h9dk","财富管理":"lks1","wealth":"ltv9","被动收入":"h9dk","财务自由":"jwcq"}
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
