@@ -1,4 +1,4 @@
-export const redirects = JSON.parse("{\"/about.html\":\"/blog/about/\",\"/jottings/daily-reflection.html\":\"/jottings/daily-reflection/\",\"/preview/custom-component.example.html\":\"/article/rb1tg6nv/\",\"/preview/markdown.html\":\"/article/0p1ghmr3/\",\"/technology/css-grid-layout.html\":\"/technology/css-grid-layout/\",\"/technology/getting-started.html\":\"/technology/getting-started/\",\"/technology/vue3-tips.html\":\"/technology/vue3-tips/\",\"/technology/vuepress-giscus-comment.html\":\"/technology/vuepress-giscus-comment/\",\"/wealth/investment-basics.html\":\"/wealth/investment-basics/\",\"/wealth/passive-income.html\":\"/wealth/passive-income/\"}")
+export const redirects = JSON.parse("{\"/about.html\":\"/blog/about/\",\"/jottings/daily-reflection.html\":\"/jottings/daily-reflection/\",\"/preview/custom-component.example.html\":\"/article/rb1tg6nv/\",\"/preview/markdown.html\":\"/article/0p1ghmr3/\",\"/technology/css-grid-layout.html\":\"/technology/css-grid-layout/\",\"/technology/getting-started.html\":\"/technology/getting-started/\",\"/technology/vue3-tips.html\":\"/technology/vue3-tips/\",\"/technology/vuepress-giscus-comment.html\":\"/technology/vuepress-giscus-comment/\",\"/wealth/investment-basics.html\":\"/wealth/investment-basics/\",\"/wealth/passive-income.html\":\"/wealth/passive-income/\",\"/wealth/wealth-free-load1.html\":\"/wealth/wealth-free-load1/\"}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":""} }],
@@ -15,9 +15,27 @@ export const routes = Object.fromEntries([
   ["/wealth/", { loader: () => import(/* webpackChunkName: "wealth_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/wealth/index.html.js"), meta: {"title":"理财文章"} }],
   ["/wealth/investment-basics/", { loader: () => import(/* webpackChunkName: "wealth_investment-basics_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/wealth/investment-basics/index.html.js"), meta: {"title":"投资基础知识入门"} }],
   ["/wealth/passive-income/", { loader: () => import(/* webpackChunkName: "wealth_passive-income_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/wealth/passive-income/index.html.js"), meta: {"title":"被动收入：实现财务自由的关键"} }],
+  ["/wealth/wealth-free-load1/", { loader: () => import(/* webpackChunkName: "wealth_wealth-free-load1_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/wealth/wealth-free-load1/index.html.js"), meta: {"title":"财富自由之路阅读（一）"} }],
   ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
   ["/blog/", { loader: () => import(/* webpackChunkName: "blog_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/index.html.js"), meta: {"title":"博客"} }],
   ["/blog/tags/", { loader: () => import(/* webpackChunkName: "blog_tags_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/tags/index.html.js"), meta: {"title":"标签"} }],
   ["/blog/archives/", { loader: () => import(/* webpackChunkName: "blog_archives_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/archives/index.html.js"), meta: {"title":"归档"} }],
   ["/blog/categories/", { loader: () => import(/* webpackChunkName: "blog_categories_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/categories/index.html.js"), meta: {"title":"分类"} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

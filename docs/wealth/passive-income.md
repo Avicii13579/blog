@@ -5,7 +5,6 @@ tags:
   - 被动收入
   - 财务自由
   - 财富管理
-  - wealth
 categories:
   - 财富管理
 description: 探讨被动收入的概念、类型和实现方法，帮助你构建多元化的收入来源
@@ -18,7 +17,6 @@ permalink: /wealth/passive-income/
   :showRelatedArticles="false"
 />
 
-# 被动收入：实现财务自由的关键
 
 被动收入是指不需要持续投入大量时间和精力就能获得的收入。它是实现财务自由的重要途径。
 

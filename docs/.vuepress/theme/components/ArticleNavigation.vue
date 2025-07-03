@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from 'vue-router'
 import { ref, onMounted, computed } from 'vue'
+import { getArticlesByTheme, Article } from './common/articleData'
 
 interface Props {
   showBreadcrumb?: boolean
@@ -95,65 +96,32 @@ const breadcrumbs = computed((): BreadcrumbItem[] => {
 })
 
 /**
- * 根据路径获取文章标题
+ * 根据路径获取文章信息
+ * @param path 路径
+ * @returns 文章对象或 undefined
  */
-const getArticleTitle = (path: string): string => {
-  const titleMap: Record<string, string> = {
-    '/technology/getting-started/': 'VuePress 入门指南',
-    '/technology/vue3-tips/': 'Vue3 开发技巧总结',
-    '/technology/css-grid-layout/': 'CSS Grid 布局完全指南',
-    '/technology/vuepress-giscus-comment/': '在 VuePress 集成 Giscus 评论系统',
-    '/wealth/investment-basics/': '投资基础知识',
-    '/wealth/passive-income/': '被动收入构建指南',
-    '/jottings/daily-reflection/': '日常反思：如何提升工作效率'
+const getArticleByPath = (path: string): Article | undefined => {
+  // 统一去除路径前缀，保证匹配
+  const themes = ['technology', 'wealth', 'jottings']
+  for (const theme of themes) {
+    const articles = getArticlesByTheme(theme)
+    // 兼容 /blog/xxx/ 和 /xxx/ 两种路径
+    const found = articles.find(
+      a => a.link === path || a.link.replace('/blog', '') === path
+    )
+    if (found) return found
   }
-  
-  return titleMap[path] || '文章详情'
+  return undefined
 }
 
 /**
- * 获取返回路径
+ * 根据路径获取文章标题
+ * @param path 路径
+ * @returns 文章标题
  */
-const getBackPath = computed(() => {
-  const path = route.path
-  
-  if (path.startsWith('/technology/')) {
-    return '/technology/'
-  } else if (path.startsWith('/wealth/')) {
-    return '/wealth/'
-  } else if (path.startsWith('/jottings/')) {
-    return '/jottings/'
-  }
-  
-  return '/'
-})
-
-/**
- * 获取返回按钮文本
- */
-const getBackText = computed(() => {
-  const path = route.path
-  
-  if (path.startsWith('/technology/')) {
-    return '返回技术文章'
-  } else if (path.startsWith('/wealth/')) {
-    return '返回理财文章'
-  } else if (path.startsWith('/jottings/')) {
-    return '返回随笔文章'
-  }
-  
-  return '返回首页'
-})
-
-/**
- * 返回上一页或指定路径
- */
-const goBack = () => {
-  if (canGoBack.value) {
-    router.back()
-  } else {
-    router.push(getBackPath.value)
-  }
+const getArticleTitle = (path: string): string => {
+  const article = getArticleByPath(path)
+  return article?.title || '文章详情'
 }
 
 /**
@@ -164,51 +132,20 @@ const navigateTo = (path: string) => {
 }
 
 /**
- * 相关文章类型定义
- */
-interface RelatedArticle {
-  title: string
-  link: string
-  description: string
-}
-
-/**
  * 获取相关文章
+ * @returns 相关文章数组
  */
-const relatedArticles = computed((): RelatedArticle[] => {
+const relatedArticles = computed((): Article[] => {
   const path = route.path
-  const articlesMap: Record<string, RelatedArticle[]> = {
-    technology: [
-      {
-        title: 'Vue3 开发技巧总结',
-        link: '/technology/vue3-tips/',
-        description: '分享一些 Vue3 开发中的实用技巧和最佳实践'
-      },
-      {
-        title: 'CSS Grid 布局完全指南',
-        link: '/technology/css-grid-layout/',
-        description: '深入理解 CSS Grid 布局系统，掌握现代网页布局技术'
-      }
-    ],
-    wealth: [
-      {
-        title: '被动收入构建指南',
-        link: '/wealth/passive-income/',
-        description: '学习如何构建多元化的被动收入来源，实现财务自由'
-      }
-    ],
-    jottings: []
-  }
-  
-  if (path.startsWith('/technology/')) {
-    return articlesMap.technology.filter(article => article.link !== path)
-  } else if (path.startsWith('/wealth/')) {
-    return articlesMap.wealth.filter(article => article.link !== path)
-  } else if (path.startsWith('/jottings/')) {
-    return articlesMap.jottings.filter(article => article.link !== path)
-  }
-  
-  return []
+  let theme = ''
+  if (path.startsWith('/technology/')) theme = 'technology'
+  else if (path.startsWith('/wealth/')) theme = 'wealth'
+  else if (path.startsWith('/jottings/')) theme = 'jottings'
+  if (!theme) return []
+  // 过滤掉当前文章
+  return getArticlesByTheme(theme).filter(
+    article => article.link.replace('/blog', '') !== path
+  )
 })
 </script>
 
@@ -249,7 +186,7 @@ const relatedArticles = computed((): RelatedArticle[] => {
           class="related-item"
         >
           <h4 class="related-item-title">
-            <a :href="article.link" @click.prevent="navigateTo(article.link)">
+            <a :href="article.link.replace('/blog', '')" @click.prevent="navigateTo(article.link.replace('/blog', ''))">
               {{ article.title }}
             </a>
           </h4>

@@ -19,8 +19,6 @@ packImgName: img1
   :showRelatedArticles="false"
 />
 
-# 在 VuePress 集成 Giscus 评论系统
-
 
 Giscus 是一个基于 GitHub Discussions 的免费评论系统，适合静态博客。本文将详细介绍如何在 VuePress 博客中集成 Giscus，实现文章评论功能。
 ![图片描述](/images/technology/img1/img1.png)

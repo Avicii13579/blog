@@ -105,6 +105,20 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       ],
       "date": "Mon Feb 05",
       "description": "探讨被动收入的概念、类型和实现方法，帮助你构建多元化的收入来源"
+    },
+    {
+      "title": "财富自由之路阅读（一）",
+      "link": "/blog/wealth/wealth-free-load1/",
+      "tags": [
+        "财富理解",
+        "财富管理",
+        "wealth"
+      ],
+      "categories": [
+        "财富管理"
+      ],
+      "date": "Thu Jul 03",
+      "description": "什么是财富自由？我现在拥有着什么样的财富？"
     }
   ],
   "jottings": [

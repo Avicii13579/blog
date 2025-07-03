@@ -5,7 +5,6 @@ tags:
   - 投资
   - 理财
   - 财富管理
-  - wealth
 categories:
   - 财富管理
 description: 学习投资的基础知识，了解不同类型的投资工具和风险管理
@@ -18,7 +17,6 @@ permalink: /wealth/investment-basics/
   :showRelatedArticles="false"
 />
 
-# 投资基础知识入门
 
 投资是实现财务自由的重要途径，本文将介绍投资的基础知识和核心概念。
 

@@ -18,8 +18,6 @@ permalink: /jottings/daily-reflection/
   :showRelatedArticles="false"
 />
 
-# 日常反思：记录生活的点滴感悟
-
 生活中有太多值得记录和思考的瞬间，这些看似平凡的日常，往往蕴含着深刻的道理。
 
 ## 关于时间
