@@ -1,15 +1,2 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"keby","个人成长":"biyn","随笔":"lxch","jottings":"1j4l","预览":"keby","组件":"cdew","markdown":"biyn","CSS":"9aef","Grid":"3wh9","布局":"h5i0","technology":"v5vc","VuePress":"zgeh","教程":"5ohx","Vue3":"lhl8","前端":"cdew","技巧":"ikpj","Giscus":"6wj5","投资":"biyn","理财":"6wj5","财富管理":"biyn","被动收入":"6wj5","财务自由":"d2vb","财富理解":"1eal"}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateArticleTagColors) {
-    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ articleTagColors }) => {
-    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
-  })
-}
+export const articleTagColors = {"生活感悟":"l8cx","个人成长":"uc6a","随笔":"mueo","jottings":"pz0p","预览":"l8cx","组件":"jnn6","markdown":"uc6a","CSS":"gdz5","Grid":"mnq1","布局":"zz8k","technology":"429n","VuePress":"220n","教程":"de52","Vue3":"7n0l","前端":"jnn6","技巧":"aj5r","Giscus":"yoit","投资":"uc6a","理财":"yoit","财富管理":"uc6a","被动收入":"yoit","财务自由":"dz7w","财富理解":"fktm"}
