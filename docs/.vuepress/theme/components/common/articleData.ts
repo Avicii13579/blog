@@ -82,8 +82,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "tags": [
         "投资",
         "理财",
-        "财富管理",
-        "wealth"
+        "财富管理"
       ],
       "categories": [
         "财富管理"
@@ -97,8 +96,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "tags": [
         "被动收入",
         "财务自由",
-        "财富管理",
-        "wealth"
+        "财富管理"
       ],
       "categories": [
         "财富管理"
@@ -111,8 +109,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "link": "/blog/wealth/wealth-free-load1/",
       "tags": [
         "财富理解",
-        "财富管理",
-        "wealth"
+        "财富管理"
       ],
       "categories": [
         "财富管理"

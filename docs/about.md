@@ -2,7 +2,7 @@
 title: 关于我
 pageLayout: page
 createTime: 2025/06/30 23:37:45
-permalink:  /blog/about/
+permalink:  /about/
 ---
 
 <div class="about-container">

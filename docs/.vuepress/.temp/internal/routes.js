@@ -1,8 +1,8 @@
-export const redirects = JSON.parse("{\"/about.html\":\"/blog/about/\",\"/jottings/daily-reflection.html\":\"/jottings/daily-reflection/\",\"/preview/custom-component.example.html\":\"/article/rb1tg6nv/\",\"/preview/markdown.html\":\"/article/0p1ghmr3/\",\"/technology/css-grid-layout.html\":\"/technology/css-grid-layout/\",\"/technology/getting-started.html\":\"/technology/getting-started/\",\"/technology/vue3-tips.html\":\"/technology/vue3-tips/\",\"/technology/vuepress-giscus-comment.html\":\"/technology/vuepress-giscus-comment/\",\"/wealth/investment-basics.html\":\"/wealth/investment-basics/\",\"/wealth/passive-income.html\":\"/wealth/passive-income/\",\"/wealth/wealth-free-load1.html\":\"/wealth/wealth-free-load1/\"}")
+export const redirects = JSON.parse("{\"/about.html\":\"/about/\",\"/jottings/daily-reflection.html\":\"/jottings/daily-reflection/\",\"/preview/custom-component.example.html\":\"/article/rb1tg6nv/\",\"/preview/markdown.html\":\"/article/0p1ghmr3/\",\"/technology/css-grid-layout.html\":\"/technology/css-grid-layout/\",\"/technology/getting-started.html\":\"/technology/getting-started/\",\"/technology/vue3-tips.html\":\"/technology/vue3-tips/\",\"/technology/vuepress-giscus-comment.html\":\"/technology/vuepress-giscus-comment/\",\"/wealth/investment-basics.html\":\"/wealth/investment-basics/\",\"/wealth/passive-income.html\":\"/wealth/passive-income/\",\"/wealth/wealth-free-load1.html\":\"/wealth/wealth-free-load1/\"}")
 
 export const routes = Object.fromEntries([
   ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":""} }],
-  ["/blog/about/", { loader: () => import(/* webpackChunkName: "blog_about_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/about/index.html.js"), meta: {"title":"关于我"} }],
+  ["/about/", { loader: () => import(/* webpackChunkName: "about_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/about/index.html.js"), meta: {"title":"关于我"} }],
   ["/jottings/", { loader: () => import(/* webpackChunkName: "jottings_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/jottings/index.html.js"), meta: {"title":"随笔文章"} }],
   ["/jottings/daily-reflection/", { loader: () => import(/* webpackChunkName: "jottings_daily-reflection_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/jottings/daily-reflection/index.html.js"), meta: {"title":"日常反思：记录生活的点滴感悟"} }],
   ["/article/rb1tg6nv/", { loader: () => import(/* webpackChunkName: "article_rb1tg6nv_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/article/rb1tg6nv/index.html.js"), meta: {"title":"自定义组件"} }],
@@ -22,3 +22,20 @@ export const routes = Object.fromEntries([
   ["/blog/archives/", { loader: () => import(/* webpackChunkName: "blog_archives_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/archives/index.html.js"), meta: {"title":"归档"} }],
   ["/blog/categories/", { loader: () => import(/* webpackChunkName: "blog_categories_index.html" */"/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/blog/categories/index.html.js"), meta: {"title":"分类"} }],
 ]);
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateRoutes) {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+  }
+  if (__VUE_HMR_RUNTIME__.updateRedirects) {
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ routes, redirects }) => {
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
+}

@@ -3,9 +3,6 @@ title: 日常反思：记录生活的点滴感悟
 date: 2024-02-10T00:00:00.000Z
 tags:
   - 生活感悟
-  - 个人成长
-  - 随笔
-  - jottings
 categories:
   - 生活随笔
 description: 记录日常生活中的思考和感悟，分享对生活的理解和体会

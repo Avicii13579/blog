@@ -18,7 +18,7 @@ config:
         -
           theme: alt
           text: 关于我 →
-          link: /about/
+          link: /blog/tags/
   -
     type: features
     features:

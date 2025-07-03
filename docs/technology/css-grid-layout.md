@@ -4,8 +4,6 @@ date: 2024-01-25T00:00:00.000Z
 tags:
   - CSS
   - Grid
-  - 布局
-  - technology
 categories:
   - 前端开发
 description: 深入理解 CSS Grid 布局系统，掌握现代网页布局技术
