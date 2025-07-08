@@ -20,9 +20,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "link": "/blog/technology/css-grid-layout/",
       "tags": [
         "CSS",
-        "Grid",
-        "布局",
-        "technology"
+        "Grid"
       ],
       "categories": [
         "前端开发"
@@ -34,9 +32,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "title": "VuePress 入门指南",
       "link": "/blog/technology/getting-started/",
       "tags": [
-        "VuePress",
-        "教程",
-        "technology"
+        "VuePress 教程"
       ],
       "categories": [
         "前端开发"
@@ -45,13 +41,22 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "description": "学习如何使用 VuePress 搭建个人博客和文档网站"
     },
     {
+      "title": "Markdown",
+      "link": "/blog/article/0p1ghmr3/",
+      "tags": [
+        "markdown"
+      ],
+      "categories": [
+        "前端开发"
+      ],
+      "date": "",
+      "description": ""
+    },
+    {
       "title": "Vue3 开发技巧总结",
       "link": "/blog/technology/vue3-tips/",
       "tags": [
-        "Vue3",
-        "前端",
-        "技巧",
-        "technology"
+        "Vue3 技巧"
       ],
       "categories": [
         "前端开发"
@@ -105,16 +110,15 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "description": "探讨被动收入的概念、类型和实现方法，帮助你构建多元化的收入来源"
     },
     {
-      "title": "财富自由之路阅读（一）",
+      "title": "重塑个人操作系统：我的《财富自由之路》阅读感悟",
       "link": "/blog/wealth/wealth-free-load1/",
       "tags": [
-        "财富理解",
-        "财富管理"
+        "财富理解"
       ],
       "categories": [
         "财富管理"
       ],
-      "date": "Thu Jul 03",
+      "date": "Tue Jul 08",
       "description": "什么是财富自由？我现在拥有着什么样的财富？"
     }
   ],
@@ -123,10 +127,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "title": "日常反思：记录生活的点滴感悟",
       "link": "/blog/jottings/daily-reflection/",
       "tags": [
-        "生活感悟",
-        "个人成长",
-        "随笔",
-        "jottings"
+        "生活感悟"
       ],
       "categories": [
         "生活随笔"
