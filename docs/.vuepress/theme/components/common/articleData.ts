@@ -54,7 +54,7 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "categories": [
         "前端开发"
       ],
-      "date": "Mon Jan 15",
+      "date": "Sat Jun 28",
       "description": "学习如何使用 VuePress 搭建个人博客和文档网站",
       "createTime": "2025/06/28"
     },

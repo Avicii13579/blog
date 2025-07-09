@@ -1,15 +1,2 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"sh6t","预览":"sh6t","组件":"w0ut","CSS":"i4pq","Grid":"k8lt","VuePress 教程":"2tiw","markdown":"z0b6","Vue3 技巧":"sh6t","Vue3":"2tiw","Giscus":"vnw5","VuePress":"r1nn","technology":"jbcd","投资":"z0b6","理财":"vnw5","财富管理":"z0b6","被动收入":"vnw5","财务自由":"jd1g","财富理解":"5rry"}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateArticleTagColors) {
-    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ articleTagColors }) => {
-    __VUE_HMR_RUNTIME__.updateArticleTagColors(articleTagColors)
-  })
-}
+export const articleTagColors = {"生活感悟":"1t8j","预览":"1t8j","组件":"fbw7","CSS":"r82e","Grid":"oghw","VuePress 教程":"ffm4","markdown":"bt63","Vue3 技巧":"1t8j","Vue3":"ffm4","Giscus":"r6j2","VuePress":"acnd","technology":"3hwn","投资":"bt63","理财":"r6j2","财富管理":"bt63","被动收入":"r6j2","财务自由":"ty2m","财富理解":"8ig0"}
