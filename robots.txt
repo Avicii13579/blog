@@ -1,0 +1,3 @@
+Sitemap: https://avicii13579.github.io/blog/blog/sitemap.xml
+User-agent:*
+Disallow:
