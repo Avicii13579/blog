@@ -1,3 +1,16 @@
 import comp from "/Users/daerduo/Desktop/blog/blog/docs/.vuepress/.temp/pages/article/rb1tg6nv/index.html.vue"
-const data = JSON.parse("{\"path\":\"/article/rb1tg6nv/\",\"title\":\"自定义组件\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"自定义组件\",\"tags\":[\"预览\",\"组件\"],\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/article/rb1tg6nv/\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"自定义组件\\\",\\\"image\\\":[\\\"\\\"],\\\"dateModified\\\":\\\"2025-06-29T07:58:11.000Z\\\",\\\"author\\\":[]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://avicii13579.github.io/blog/blog/article/rb1tg6nv/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"吾园小记\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"自定义组件\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2025-06-29T07:58:11.000Z\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"组件\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"预览\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2025-06-29T07:58:11.000Z\"}]]},\"readingTime\":{\"minutes\":0.07,\"words\":20},\"git\":{\"createdTime\":1751183891000,\"updatedTime\":1751183891000,\"contributors\":[{\"name\":\"Rowan\",\"username\":\"Rowan\",\"email\":\"18699499130@163.com\",\"commits\":1,\"avatar\":\"https://avatars.githubusercontent.com/Rowan?v=4\",\"url\":\"https://github.com/Rowan\"}]},\"filePathRelative\":\"preview/custom-component.example.md\",\"headers\":[],\"categoryList\":[{\"id\":\"5ebeb6\",\"sort\":10000,\"name\":\"preview\"}]}")
+const data = JSON.parse("{\"path\":\"/article/rb1tg6nv/\",\"title\":\"自定义组件\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"自定义组件\",\"tags\":[\"预览\",\"组件\"],\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/article/rb1tg6nv/\"},\"readingTime\":{\"minutes\":0.07,\"words\":20},\"git\":{},\"filePathRelative\":\"preview/custom-component.example.md\",\"headers\":[],\"categoryList\":[{\"id\":\"5ebeb6\",\"sort\":10000,\"name\":\"preview\"}]}")
 export { comp, data }
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updatePageData) {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ data }) => {
+    __VUE_HMR_RUNTIME__.updatePageData(data)
+  })
+}

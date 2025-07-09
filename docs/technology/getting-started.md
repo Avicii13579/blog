@@ -1,12 +1,12 @@
 ---
 title: VuePress 入门指南
-date: 2024-01-15T00:00:00.000Z
+date: 2025-06-28T00:00:00.000Z
 tags:
   - VuePress 教程
 categories:
   - 前端开发
 description: 学习如何使用 VuePress 搭建个人博客和文档网站
-createTime: 2025/06/30 23:34:35
+createTime: 2025/06/28 23:34:35
 permalink: /technology/getting-started/
 ---
 
