@@ -88,6 +88,19 @@ export const getArticlesByTheme = (theme: string): Article[] => {
   ],
   "wealth": [
     {
+      "title": "财商觉醒从这里开始：《穷爸爸富爸爸》带来的思维跃迁",
+      "link": "/blog/wealth/rich-dad-poor-dad-review/",
+      "tags": [
+        "财富理解"
+      ],
+      "categories": [
+        "财富管理"
+      ],
+      "date": "Tue Jul 08",
+      "description": "什么是财富自由？我现在拥有着什么样的财富？",
+      "createTime": "2025/7/5 2"
+    },
+    {
       "title": "重塑个人操作系统：我的《财富自由之路》阅读感悟",
       "link": "/blog/wealth/wealth-free-load1/",
       "tags": [
