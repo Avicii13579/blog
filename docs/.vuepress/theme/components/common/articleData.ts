@@ -17,6 +17,19 @@ export const getArticlesByTheme = (theme: string): Article[] => {
   const articlesMap: Record<string, Article[]> = {
   "technology": [
     {
+      "title": "Ant Design + Next.js SSR 样式闪烁问题解决方案",
+      "link": "/blog/technology/nextjs-ant-design/",
+      "tags": [
+        "nextjs"
+      ],
+      "categories": [
+        "前端开发"
+      ],
+      "date": "",
+      "description": "",
+      "createTime": "2025/07/28"
+    },
+    {
       "title": "在 VuePress 集成 Giscus 评论系统",
       "link": "/blog/technology/vuepress-giscus-comment/",
       "tags": [

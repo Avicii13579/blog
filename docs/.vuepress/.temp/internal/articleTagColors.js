@@ -1,5 +1,5 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"j0zb","预览":"j0zb","组件":"lm0i","CSS":"1b5r","Grid":"mzr5","VuePress 教程":"gmve","markdown":"7tzn","Vue3 技巧":"j0zb","Vue3":"gmve","Giscus":"naj6","VuePress":"ac12","technology":"gxo8","投资":"7tzn","理财":"naj6","财富管理":"7tzn","被动收入":"naj6","财务自由":"s4le","财富理解":"65ty"}
+export const articleTagColors = {"生活感悟":"r64o","预览":"r64o","组件":"p1bc","CSS":"4ds1","Grid":"0rny","VuePress 教程":"o04r","markdown":"qerk","nextjs":"f108","Vue3 技巧":"r64o","Vue3":"o04r","Giscus":"5msw","VuePress":"wp07","technology":"lqs1","投资":"qerk","理财":"5msw","财富管理":"qerk","被动收入":"5msw","财务自由":"jpeb","财富理解":"73ci"}
 
 if (import.meta.webpackHot) {
   import.meta.webpackHot.accept()
