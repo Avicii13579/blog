@@ -1,4 +1,18 @@
-# Vue3 响应式系统详解
+---
+title: Vue3源码总结（二）响应式系统详解
+createTime: 2025/08/03 09:46:57
+description: Vue3源码总结（二）响应式系统详解
+tags:
+  - Vue3
+  - technology
+categories:
+  - 前端开发
+permalink: /technology/vue3-origin-part2/
+---
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
 
 ## 概述
 

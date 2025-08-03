@@ -1,4 +1,19 @@
-# Vue3 Compiler 编译器详解
+---
+title: Vue3源码总结（四）Compiler编译器详解
+createTime: 2025/08/03 09:59:58
+description: Vue3源码总结（四）Compiler编译器详解
+tags:
+  - Vue3
+  - technology
+categories:
+  - 前端开发
+permalink: /technology/vue3-origin-part4/
+---
+
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
 
 ## 概述
 

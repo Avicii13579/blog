@@ -1,4 +1,18 @@
-# Vue3 Runtime 运行时详解
+---
+title: Vue3源码总结（三）Runtime运行时详解
+createTime: 2025/08/03 09:54:26
+description: Vue3源码总结（三）Runtime运行时详解
+tags:
+  - Vue3
+  - technology
+categories:
+  - 前端开发
+permalink: /technology/vue3-origin-part3/
+---
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
 
 ## 概述
 

@@ -1,223 +1,48 @@
-export const redirects = JSON.parse(
-  '{"/about.html":"/about/","/jottings/daily-reflection.html":"/jottings/daily-reflection/","/preview/custom-component.example.html":"/article/rb1tg6nv/","/technology/css-grid-layout.html":"/technology/css-grid-layout/","/technology/getting-started.html":"/technology/getting-started/","/technology/markdown.html":"/article/0p1ghmr3/","/technology/nextjs-ant-design-ssr.html":"/technology/nextjs-ant-design/","/technology/vue3-tips.html":"/technology/vue3-tips/","/technology/vuepress-giscus-comment.html":"/technology/vuepress-giscus-comment/","/wealth/investment-basics.html":"/wealth/investment-basics/","/wealth/passive-income.html":"/wealth/passive-income/","/wealth/rich-dad-poor-dad-review.html":"/wealth/rich-dad-poor-dad-review/","/wealth/wealth-free-load-review.html":"/wealth/wealth-free-load1/"}'
-);
+export const redirects = JSON.parse("{\"/about.html\":\"/about/\",\"/jottings/daily-reflection.html\":\"/jottings/daily-reflection/\",\"/preview/custom-component.example.html\":\"/article/rb1tg6nv/\",\"/technology/Vue3%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89%E6%A0%B8%E5%BF%83%E6%8F%8F%E8%BF%B0.html\":\"/technology/vue3-origin-part1/\",\"/technology/Vue3%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%89%EF%BC%89Runtime%E8%BF%90%E8%A1%8C%E6%97%B6%E8%AF%A6%E8%A7%A3.html\":\"/technology/vue3-origin-part3/\",\"/technology/Vue3%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89%E5%93%8D%E5%BA%94%E5%BC%8F%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3.html\":\"/technology/vue3-origin-part2/\",\"/technology/Vue3%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%94%EF%BC%89%E6%A0%B8%E5%BF%83%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3.html\":\"/technology/vue3-origin-part5/\",\"/technology/Vue3%E6%BA%90%E7%A0%81%E6%80%BB%E7%BB%93%EF%BC%88%E5%9B%9B%EF%BC%89Compiler%E7%BC%96%E8%AF%91%E5%99%A8%E8%AF%A6%E8%A7%A3.html\":\"/technology/vue3-origin-part4/\",\"/technology/css-grid-layout.html\":\"/technology/css-grid-layout/\",\"/technology/getting-started.html\":\"/technology/getting-started/\",\"/technology/markdown.html\":\"/article/0p1ghmr3/\",\"/technology/nextjs-ant-design-ssr.html\":\"/technology/nextjs-ant-design/\",\"/technology/vue3-tips.html\":\"/technology/vue3-tips/\",\"/technology/vuepress-giscus-comment.html\":\"/technology/vuepress-giscus-comment/\",\"/wealth/investment-basics.html\":\"/wealth/investment-basics/\",\"/wealth/passive-income.html\":\"/wealth/passive-income/\",\"/wealth/rich-dad-poor-dad-review.html\":\"/wealth/rich-dad-poor-dad-review/\",\"/wealth/wealth-free-load-review.html\":\"/wealth/wealth-free-load1/\"}")
 
 export const routes = Object.fromEntries([
-  [
-    "/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/index.html.js"
-        ),
-      meta: { title: "" },
-    },
-  ],
-  [
-    "/about/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "about_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/about/index.html.js"
-        ),
-      meta: { title: "关于我" },
-    },
-  ],
-  [
-    "/jottings/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "jottings_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/jottings/index.html.js"
-        ),
-      meta: { title: "随笔文章" },
-    },
-  ],
-  [
-    "/jottings/daily-reflection/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "jottings_daily-reflection_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/jottings/daily-reflection/index.html.js"
-        ),
-      meta: { title: "日常反思：记录生活的点滴感悟" },
-    },
-  ],
-  [
-    "/article/rb1tg6nv/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "article_rb1tg6nv_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/article/rb1tg6nv/index.html.js"
-        ),
-      meta: { title: "自定义组件" },
-    },
-  ],
-  [
-    "/article/0p1ghmr3/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "article_0p1ghmr3_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/article/0p1ghmr3/index.html.js"
-        ),
-      meta: { title: "Markdown" },
-    },
-  ],
-  [
-    "/technology/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "technology_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/index.html.js"
-        ),
-      meta: { title: "技术文章" },
-    },
-  ],
-  [
-    "/technology/css-grid-layout/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "technology_css-grid-layout_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/css-grid-layout/index.html.js"
-        ),
-      meta: { title: "CSS Grid 布局完全指南" },
-    },
-  ],
-  [
-    "/technology/getting-started/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "technology_getting-started_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/getting-started/index.html.js"
-        ),
-      meta: { title: "VuePress 入门指南" },
-    },
-  ],
-  [
-    "/technology/vue3-tips/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "technology_vue3-tips_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-tips/index.html.js"
-        ),
-      meta: { title: "Vue3 开发技巧总结" },
-    },
-  ],
-  [
-    "/technology/vuepress-giscus-comment/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "technology_vuepress-giscus-comment_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vuepress-giscus-comment/index.html.js"
-        ),
-      meta: { title: "在 VuePress 集成 Giscus 评论系统" },
-    },
-  ],
-  [
-    "/wealth/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "wealth_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/index.html.js"
-        ),
-      meta: { title: "理财文章" },
-    },
-  ],
-  [
-    "/wealth/investment-basics/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "wealth_investment-basics_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/investment-basics/index.html.js"
-        ),
-      meta: { title: "投资基础知识入门" },
-    },
-  ],
-  [
-    "/wealth/passive-income/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "wealth_passive-income_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/passive-income/index.html.js"
-        ),
-      meta: { title: "被动收入：实现财务自由的关键" },
-    },
-  ],
-  [
-    "/wealth/wealth-free-load1/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "wealth_wealth-free-load1_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/wealth-free-load1/index.html.js"
-        ),
-      meta: { title: "财富自由之路阅读（一）" },
-    },
-  ],
-  [
-    "/404.html",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "404.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/404.html.js"
-        ),
-      meta: { title: "" },
-    },
-  ],
-  [
-    "/blog/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "blog_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/index.html.js"
-        ),
-      meta: { title: "博客" },
-    },
-  ],
-  [
-    "/blog/tags/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "blog_tags_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/tags/index.html.js"
-        ),
-      meta: { title: "标签" },
-    },
-  ],
-  [
-    "/blog/archives/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "blog_archives_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/archives/index.html.js"
-        ),
-      meta: { title: "归档" },
-    },
-  ],
-  [
-    "/blog/categories/",
-    {
-      loader: () =>
-        import(
-          /* webpackChunkName: "blog_categories_index.html" */ "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/categories/index.html.js"
-        ),
-      meta: { title: "分类" },
-    },
-  ],
+  ["/", { loader: () => import(/* webpackChunkName: "index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/index.html.js"), meta: {"title":""} }],
+  ["/about/", { loader: () => import(/* webpackChunkName: "about_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/about/index.html.js"), meta: {"title":"关于我"} }],
+  ["/jottings/", { loader: () => import(/* webpackChunkName: "jottings_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/jottings/index.html.js"), meta: {"title":"随笔文章"} }],
+  ["/jottings/daily-reflection/", { loader: () => import(/* webpackChunkName: "jottings_daily-reflection_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/jottings/daily-reflection/index.html.js"), meta: {"title":"日常反思：记录生活的点滴感悟"} }],
+  ["/article/rb1tg6nv/", { loader: () => import(/* webpackChunkName: "article_rb1tg6nv_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/article/rb1tg6nv/index.html.js"), meta: {"title":"自定义组件"} }],
+  ["/technology/", { loader: () => import(/* webpackChunkName: "technology_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/index.html.js"), meta: {"title":"技术文章"} }],
+  ["/technology/vue3-origin-part1/", { loader: () => import(/* webpackChunkName: "technology_vue3-origin-part1_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-origin-part1/index.html.js"), meta: {"title":"Vue3源码总结（一）核心描述"} }],
+  ["/technology/vue3-origin-part3/", { loader: () => import(/* webpackChunkName: "technology_vue3-origin-part3_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-origin-part3/index.html.js"), meta: {"title":"Vue3源码总结（三）Runtime运行时详解"} }],
+  ["/technology/vue3-origin-part2/", { loader: () => import(/* webpackChunkName: "technology_vue3-origin-part2_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-origin-part2/index.html.js"), meta: {"title":"Vue3源码总结（二）响应式系统详解"} }],
+  ["/technology/vue3-origin-part5/", { loader: () => import(/* webpackChunkName: "technology_vue3-origin-part5_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-origin-part5/index.html.js"), meta: {"title":"Vue3源码总结（五）核心函数详解"} }],
+  ["/technology/vue3-origin-part4/", { loader: () => import(/* webpackChunkName: "technology_vue3-origin-part4_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-origin-part4/index.html.js"), meta: {"title":"Vue3源码总结（四）Compiler编译器详解"} }],
+  ["/technology/css-grid-layout/", { loader: () => import(/* webpackChunkName: "technology_css-grid-layout_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/css-grid-layout/index.html.js"), meta: {"title":"CSS Grid 布局完全指南"} }],
+  ["/technology/getting-started/", { loader: () => import(/* webpackChunkName: "technology_getting-started_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/getting-started/index.html.js"), meta: {"title":"VuePress 入门指南"} }],
+  ["/article/0p1ghmr3/", { loader: () => import(/* webpackChunkName: "article_0p1ghmr3_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/article/0p1ghmr3/index.html.js"), meta: {"title":"Markdown"} }],
+  ["/technology/nextjs-ant-design/", { loader: () => import(/* webpackChunkName: "technology_nextjs-ant-design_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/nextjs-ant-design/index.html.js"), meta: {"title":"Ant Design + Next.js SSR 样式闪烁问题解决方案"} }],
+  ["/technology/vue3-tips/", { loader: () => import(/* webpackChunkName: "technology_vue3-tips_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vue3-tips/index.html.js"), meta: {"title":"Vue3 开发技巧总结"} }],
+  ["/technology/vuepress-giscus-comment/", { loader: () => import(/* webpackChunkName: "technology_vuepress-giscus-comment_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/technology/vuepress-giscus-comment/index.html.js"), meta: {"title":"在 VuePress 集成 Giscus 评论系统"} }],
+  ["/wealth/", { loader: () => import(/* webpackChunkName: "wealth_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/index.html.js"), meta: {"title":"理财文章"} }],
+  ["/wealth/investment-basics/", { loader: () => import(/* webpackChunkName: "wealth_investment-basics_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/investment-basics/index.html.js"), meta: {"title":"投资基础知识入门"} }],
+  ["/wealth/passive-income/", { loader: () => import(/* webpackChunkName: "wealth_passive-income_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/passive-income/index.html.js"), meta: {"title":"被动收入：实现财务自由的关键"} }],
+  ["/wealth/rich-dad-poor-dad-review/", { loader: () => import(/* webpackChunkName: "wealth_rich-dad-poor-dad-review_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/rich-dad-poor-dad-review/index.html.js"), meta: {"title":"财商觉醒从这里开始：《穷爸爸富爸爸》带来的思维跃迁"} }],
+  ["/wealth/wealth-free-load1/", { loader: () => import(/* webpackChunkName: "wealth_wealth-free-load1_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/wealth/wealth-free-load1/index.html.js"), meta: {"title":"重塑个人操作系统：我的《财富自由之路》阅读感悟"} }],
+  ["/404.html", { loader: () => import(/* webpackChunkName: "404.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/404.html.js"), meta: {"title":""} }],
+  ["/blog/", { loader: () => import(/* webpackChunkName: "blog_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/index.html.js"), meta: {"title":"博客"} }],
+  ["/blog/tags/", { loader: () => import(/* webpackChunkName: "blog_tags_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/tags/index.html.js"), meta: {"title":"标签"} }],
+  ["/blog/archives/", { loader: () => import(/* webpackChunkName: "blog_archives_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/archives/index.html.js"), meta: {"title":"归档"} }],
+  ["/blog/categories/", { loader: () => import(/* webpackChunkName: "blog_categories_index.html" */"/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/blog/categories/index.html.js"), meta: {"title":"分类"} }],
 ]);
 
 if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept();
+  import.meta.webpackHot.accept()
   if (__VUE_HMR_RUNTIME__.updateRoutes) {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes);
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
   }
   if (__VUE_HMR_RUNTIME__.updateRedirects) {
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects);
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
   }
 }
 
 if (import.meta.hot) {
   import.meta.hot.accept(({ routes, redirects }) => {
-    __VUE_HMR_RUNTIME__.updateRoutes(routes);
-    __VUE_HMR_RUNTIME__.updateRedirects(redirects);
-  });
+    __VUE_HMR_RUNTIME__.updateRoutes(routes)
+    __VUE_HMR_RUNTIME__.updateRedirects(redirects)
+  })
 }

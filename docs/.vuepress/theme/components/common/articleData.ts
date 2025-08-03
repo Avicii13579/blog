@@ -17,6 +17,51 @@ export const getArticlesByTheme = (theme: string): Article[] => {
   const articlesMap: Record<string, Article[]> = {
   "technology": [
     {
+      "title": "Vue3源码总结（一）核心描述",
+      "link": "/blog/technology/vue3-origin-part1/",
+      "tags": [],
+      "categories": [],
+      "date": "",
+      "description": "",
+      "createTime": "2025/08/03"
+    },
+    {
+      "title": "Vue3源码总结（三）Runtime运行时详解",
+      "link": "/blog/technology/vue3-origin-part3/",
+      "tags": [],
+      "categories": [],
+      "date": "",
+      "description": "",
+      "createTime": "2025/08/03"
+    },
+    {
+      "title": "Vue3源码总结（二）响应式系统详解",
+      "link": "/blog/technology/vue3-origin-part2/",
+      "tags": [],
+      "categories": [],
+      "date": "",
+      "description": "",
+      "createTime": "2025/08/03"
+    },
+    {
+      "title": "Vue3源码总结（五）核心函数详解",
+      "link": "/blog/technology/vue3-origin-part5/",
+      "tags": [],
+      "categories": [],
+      "date": "",
+      "description": "",
+      "createTime": "2025/08/03"
+    },
+    {
+      "title": "Vue3源码总结（四）Compiler编译器详解",
+      "link": "/blog/technology/vue3-origin-part4/",
+      "tags": [],
+      "categories": [],
+      "date": "",
+      "description": "",
+      "createTime": "2025/08/03"
+    },
+    {
       "title": "Ant Design + Next.js SSR 样式闪烁问题解决方案",
       "link": "/blog/technology/nextjs-ant-design/",
       "tags": [

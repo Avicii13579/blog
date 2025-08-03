@@ -1,4 +1,19 @@
-# Vue3 核心实现逻辑深度解析 (优化补充版)
+---
+title: Vue3源码总结（一）核心描述
+createTime: 2025/08/03 10:14:19
+description: Vue3源码总结（一）核心描述
+tags:
+  - Vue3
+  - technology
+categories:
+  - 前端开发
+permalink: /technology/vue3-origin-part1/
+---
+
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
 
 ## 概述
 
@@ -25,6 +40,8 @@ Vue3 是一个采用 TypeScript 构建的现代化前端框架，其源码在架
 为了精确地存储依赖关系，Vue 3 设计了一个三层嵌套的 `WeakMap -> Map -> Set` 结构。
 
 > ```
+> WeakMap<target, Map<key, Set<effect>>>
+> 
 > WeakMap {
 >   target1 (原始对象): Map {
 >     'property1' (属性名): Set { effect1, effect2 }, // 依赖该属性的 effect 集合
@@ -43,6 +60,7 @@ Vue3 是一个采用 TypeScript 构建的现代化前端框架，其源码在架
 * **`reactive(target)`**:
     * **作用**: 将复杂数据类型（对象、数组）转换为深度响应式代理。
     * **实现**: 内部调用 `createReactiveObject`，使用 `Proxy` 和 `Reflect` 进行数据劫持。通过一个全局的 `reactiveMap` (WeakMap) 缓存已创建的代理，确保同一个对象只被代理一次，保证了单例和引用一致性。
+  
 
 * **`ref(value)`**:
     * **作用**: 为原始值（string, number, boolean）或对象创建一个响应式的引用。
@@ -110,54 +128,34 @@ Vue3 是一个采用 TypeScript 构建的现代化前端框架，其源码在架
 ## 四、核心工作流程串联
 
 以下是 Vue 3 从模板到最终视图更新的完整工作流程：
-
-```mermaid
-sequenceDiagram
-    participant B as 构建时 (Compiler)
-    participant R as 运行时 (Runtime)
-    participant D as 数据 (Reactivity)
-    participant DOM as 浏览器DOM
-
-    B->>R: 1. 编译模板，生成 render() 函数
-
-    R->>R: 2. 初始化：调用 createApp().mount()
-    R->>R: 3. 创建组件实例，执行 setup()
-    R->>R: 4. 创建渲染 effect: `effect(render, scheduler)`
-    
-    Note right of R: effect 首次执行 (挂载)
-    
-    R->>D: 5. 执行 render()，访问响应式数据
-    D->>R: 6. track()：收集渲染 effect 作为依赖
-    R->>R: 7. render() 返回 VNode 树
-    R->>DOM: 8. patch(null, VNode)：挂载 VNode，生成真实 DOM
-
-    participant U as 用户操作
-    U->>D: 9. 修改响应式数据 (e.g., state.count++)
-    
-    D->>R: 10. trigger()：触发更新，找到依赖的渲染 effect
-    R->>R: 11. Scheduler：将 effect 加入微任务队列
-
-    Note right of R: 微任务执行 (更新)
-    
-    R->>D: 12. 重新执行 render()，访问数据
-    R->>R: 13. render() 返回新 VNode 树
-    R->>DOM: 14. patch(oldVNode, newVNode)：Diff 算法，最小化更新 DOM
-```
-
+1. 构建编译：将 template 模版字符串通过编译器进行 Parse -> Transform -> Generate 转化为一个优化过的、可执行的 render 函数
+2. 挂载阶段（Runtime + Reactivity）
+    1. 初始化组件，创建组件实例，获取 setup 返回的属性和方法
+    2. 创建渲染 render 并首次执行挂载，执行 effect
+    3. render 访问响应式数据，触发 track 收集依赖
+    4. 返回 VNode 树并通过 patch 生成真实 DOM，插入到页面容器中（挂载完毕）
+3. 更新阶段（Runtime + Reactivity）
+    1. 数据修改触发 trigger，调度器将 effect 交给调度器（Scheduler），最后加入微任务
+    2. 微任务重新执行 render ，生成新 VNode
+    3. patch对比新旧节点，最小化更新 DOM，完成视图更新
+  
 ## 五、设计模式与架构特点
-核心设计模式:
+### 核心设计模式:
 
-观察者模式: 响应式系统的依赖收集与通知。
-代理模式: 使用 Proxy 对象属性访问的拦截。
-工厂模式: createRenderer 根据不同平台的配置创建不同的渲染器。
-策略模式: patch 函数根据不同的 VNode 类型选择不同的处理策略。
-单例模式: 如 activeEffect 作为一个全局单例来追踪当前 effect。
-整体架构优势:
+- 观察者模式: 响应式系统的依赖收集与通知。
+- 代理模式: 使用 Proxy 对象属性访问的拦截。
+- 工厂模式: createRenderer 根据不同平台的配置创建不同的渲染器。
+- 策略模式: patch 函数根据不同的 VNode 类型选择不同的处理策略。
+- 单例模式: 如 activeEffect 作为一个全局单例来追踪当前 effect。
 
-高性能: 编译时优化（静态提升、Patch Flags）与运行时优化（Proxy、高效 Diff 算法）相结合。
-可维护性与扩展性: monorepo 架构、模块化设计、平台无关的渲染器以及可插拔的编译器转换插件，使得框架易于维护和扩展。
-类型安全: 完全使用 TypeScript 编写，提供了强大的类型支持，提升了代码的健壮性。
-Tree-shaking 友好: API 设计充分考虑了按需引入，有助于减小最终打包体积。
+### 整体架构优势:
+
+- 高性能: 编译时优化（静态提升、Patch Flags）与运行时优化（Proxy、高效 Diff 算法）相结合。
+- 可维护性与扩展性: monorepo 架构、模块化设计、平台无关的渲染器以及可插拔的编译器转换插件，使得框架易于维护和扩展。
+- 类型安全: 完全使用 TypeScript 编写，提供了强大的类型支持，提升了代码的健壮性。
+- Tree-shaking 友好: API 设计充分考虑了按需引入，有助于减小最终打包体积。
 
 ## 总结
 Vue 3 的源码是一套设计精良、高度工程化的现代前端框架典范。它通过基于 Proxy 的精确响应式系统、高度优化的编译器以及灵活可扩展的运行时，实现了性能与开发体验的完美平衡。理解其核心逻辑，不仅能帮助我们更好地使用 Vue，也能为我们自己的软件工程实践提供宝贵的启示。
+
+![图片描述](/images/technology/vue3/核心实现逻辑深度解析.jpeg)

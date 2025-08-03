@@ -1,4 +1,19 @@
-# Vue3 核心函数详解
+---
+title: Vue3源码总结（五）核心函数详解
+createTime: 2025/08/03 09:48:39
+description:  Vue3源码总结（五）核心函数详解
+tags:
+  - Vue3
+  - technology
+categories:
+  - 前端开发
+permalink: /technology/vue3-origin-part5/
+---
+
+<ArticleNavigation 
+  :showBreadcrumb="true"
+  :showRelatedArticles="false"
+/>
 
 本文档详细解析 Vue3 源码中的核心函数实现，包括响应式系统、编译器、运行时等各个模块的关键函数。
 
