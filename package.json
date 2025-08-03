@@ -11,7 +11,7 @@
   "scripts": {
     "docs:dev": "node scripts/generate-article-data.cjs && vuepress dev docs",
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
-    "docs:build": "vuepress build docs --clean-cache --clean-temp",
+    "docs:build": "node scripts/generate-article-data.cjs && vuepress build docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
     "vp-update": "npx vp-update",
     "generate-article-data": "node scripts/generate-article-data.cjs"
