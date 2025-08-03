@@ -19,46 +19,71 @@ export const getArticlesByTheme = (theme: string): Article[] => {
     {
       "title": "Vue3源码总结（一）核心描述",
       "link": "/blog/technology/vue3-origin-part1/",
-      "tags": [],
-      "categories": [],
+      "tags": [
+        "Vue3",
+        "technology"
+      ],
+      "categories": [
+        "前端开发"
+      ],
       "date": "",
-      "description": "",
+      "description": "Vue3源码总结（一）核心描述",
       "createTime": "2025/08/03"
     },
     {
       "title": "Vue3源码总结（三）Runtime运行时详解",
       "link": "/blog/technology/vue3-origin-part3/",
-      "tags": [],
-      "categories": [],
+      "tags": [
+        "Vue3",
+        "technology"
+      ],
+      "categories": [
+        "前端开发"
+      ],
       "date": "",
-      "description": "",
+      "description": "Vue3源码总结（三）Runtime运行时详解",
       "createTime": "2025/08/03"
     },
     {
       "title": "Vue3源码总结（二）响应式系统详解",
       "link": "/blog/technology/vue3-origin-part2/",
-      "tags": [],
-      "categories": [],
+      "tags": [
+        "Vue3",
+        "technology"
+      ],
+      "categories": [
+        "前端开发"
+      ],
       "date": "",
-      "description": "",
+      "description": "Vue3源码总结（二）响应式系统详解",
       "createTime": "2025/08/03"
     },
     {
       "title": "Vue3源码总结（五）核心函数详解",
       "link": "/blog/technology/vue3-origin-part5/",
-      "tags": [],
-      "categories": [],
+      "tags": [
+        "Vue3",
+        "technology"
+      ],
+      "categories": [
+        "前端开发"
+      ],
       "date": "",
-      "description": "",
+      "description": "Vue3源码总结（五）核心函数详解",
       "createTime": "2025/08/03"
     },
     {
       "title": "Vue3源码总结（四）Compiler编译器详解",
       "link": "/blog/technology/vue3-origin-part4/",
-      "tags": [],
-      "categories": [],
+      "tags": [
+        "Vue3",
+        "technology"
+      ],
+      "categories": [
+        "前端开发"
+      ],
       "date": "",
-      "description": "",
+      "description": "Vue3源码总结（四）Compiler编译器详解",
       "createTime": "2025/08/03"
     },
     {

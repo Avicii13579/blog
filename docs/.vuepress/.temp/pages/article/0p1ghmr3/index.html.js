@@ -1,16 +1,3 @@
 import comp from "/Users/jiuan/Desktop/my-blog/docs/.vuepress/.temp/pages/article/0p1ghmr3/index.html.vue"
-const data = JSON.parse("{\"path\":\"/article/0p1ghmr3/\",\"title\":\"Markdown\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Markdown\",\"tags\":[\"markdown\"],\"categories\":[\"前端开发\"],\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/article/0p1ghmr3/\"},\"readingTime\":{\"minutes\":3.38,\"words\":1014},\"git\":{},\"filePathRelative\":\"technology/markdown.md\",\"headers\":[],\"categoryList\":[{\"id\":\"83ec45\",\"sort\":10001,\"name\":\"technology\"}]}")
+const data = JSON.parse("{\"path\":\"/article/0p1ghmr3/\",\"title\":\"Markdown\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Markdown\",\"tags\":[\"markdown\"],\"categories\":[\"前端开发\"],\"createTime\":\"2025/06/28 23:58:57\",\"permalink\":\"/article/0p1ghmr3/\",\"description\":\"标题H2 标题H3 标题H4 标题H5 标题H6 标题2 Badge 标题3 Badge 标题4 Badge 正文内容。 @property CSS at-rule是 CSS Houdini API 的一部分，它允许开发者显式地定义他们的 CSS 自定义属性, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。 @property 的...\",\"head\":[[\"script\",{\"type\":\"application/ld+json\"},\"{\\\"@context\\\":\\\"https://schema.org\\\",\\\"@type\\\":\\\"Article\\\",\\\"headline\\\":\\\"Markdown\\\",\\\"image\\\":[\\\"https://avicii13579.github.io/blog/blog/logo3.png\\\"],\\\"dateModified\\\":\\\"2025-07-08T15:18:34.000Z\\\",\\\"author\\\":[]}\"],[\"meta\",{\"property\":\"og:url\",\"content\":\"https://avicii13579.github.io/blog/blog/article/0p1ghmr3/\"}],[\"meta\",{\"property\":\"og:site_name\",\"content\":\"吾园小记\"}],[\"meta\",{\"property\":\"og:title\",\"content\":\"Markdown\"}],[\"meta\",{\"property\":\"og:description\",\"content\":\"标题H2 标题H3 标题H4 标题H5 标题H6 标题2 Badge 标题3 Badge 标题4 Badge 正文内容。 @property CSS at-rule是 CSS Houdini API 的一部分，它允许开发者显式地定义他们的 CSS 自定义属性, 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。 @property 的...\"}],[\"meta\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"meta\",{\"property\":\"og:image\",\"content\":\"https://avicii13579.github.io/blog/blog/logo3.png\"}],[\"meta\",{\"property\":\"og:locale\",\"content\":\"zh-CN\"}],[\"meta\",{\"property\":\"og:updated_time\",\"content\":\"2025-07-08T15:18:34.000Z\"}],[\"meta\",{\"property\":\"article:tag\",\"content\":\"markdown\"}],[\"meta\",{\"property\":\"article:modified_time\",\"content\":\"2025-07-08T15:18:34.000Z\"}]]},\"readingTime\":{\"minutes\":3.38,\"words\":1014},\"git\":{\"createdTime\":1751183891000,\"updatedTime\":1751987914000,\"contributors\":[{\"name\":\"Rowan\",\"username\":\"Rowan\",\"email\":\"18699499130@163.com\",\"commits\":1,\"avatar\":\"https://avatars.githubusercontent.com/Rowan?v=4\",\"url\":\"https://github.com/Rowan\"},{\"name\":\"Rowan Lee\",\"username\":\"\",\"email\":\"liyuanyuan@reach24h.com\",\"commits\":2,\"avatar\":\"https://gravatar.com/avatar/3c4c145de453dcfc192ee59f5d01bca3edaa35a1cfdc8074c5f26ef301e7db7a?d=retro\"}]},\"autoDesc\":true,\"filePathRelative\":\"technology/markdown.md\",\"headers\":[],\"categoryList\":[{\"id\":\"83ec45\",\"sort\":10000,\"name\":\"technology\"}]}")
 export { comp, data }
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updatePageData) {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ data }) => {
-    __VUE_HMR_RUNTIME__.updatePageData(data)
-  })
-}
