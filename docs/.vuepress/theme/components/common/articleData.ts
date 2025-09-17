@@ -197,6 +197,36 @@ export const getArticlesByTheme = (theme: string): Article[] => {
       "createTime": "2025/7/5 2"
     },
     {
+      "title": "李笑来的《定投之路》阅读",
+      "link": "/blog/wealth/buffett/",
+      "tags": [
+        "投资",
+        "理财",
+        "财富管理"
+      ],
+      "categories": [
+        "财富管理"
+      ],
+      "date": "Sat Sep 06",
+      "description": "李笑来的《定投之路》的读书笔记",
+      "createTime": "2025/09/17"
+    },
+    {
+      "title": "《沃伦·巴菲特传（股神巴菲特的八十年经历和财富传奇）》阅读",
+      "link": "/blog/wealth/buffett/",
+      "tags": [
+        "投资",
+        "理财",
+        "财富管理"
+      ],
+      "categories": [
+        "财富管理"
+      ],
+      "date": "Mon Sep 01",
+      "description": "《沃伦·巴菲特传（股神巴菲特的八十年经历和财富传奇）》的读书笔记",
+      "createTime": "2025/09/13"
+    },
+    {
       "title": "投资基础知识入门",
       "link": "/blog/wealth/investment-basics/",
       "tags": [

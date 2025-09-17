@@ -1,2 +1,2 @@
 import './articleTagColors.css'
-export const articleTagColors = {"生活感悟":"axbc","预览":"axbc","组件":"32h0","Vue3":"m84z","technology":"tvp1","CSS":"q36n","Grid":"thqo","VuePress 教程":"m84z","markdown":"q5sc","nextjs":"5jka","Vue3 技巧":"axbc","Giscus":"yor0","VuePress":"aepx","投资":"q5sc","理财":"yor0","财富管理":"q5sc","被动收入":"yor0","财务自由":"91l7","财富理解":"p6yy"}
+export const articleTagColors = {"生活感悟":"ju2w","预览":"ju2w","组件":"60s8","Vue3":"ab75","technology":"fn2k","CSS":"21sc","Grid":"qbgz","VuePress 教程":"ab75","markdown":"v03u","nextjs":"otk8","Vue3 技巧":"ju2w","Giscus":"djzu","VuePress":"sp44","投资":"v03u","理财":"djzu","财富管理":"v03u","被动收入":"djzu","财务自由":"d4or","财富理解":"ahdk"}
